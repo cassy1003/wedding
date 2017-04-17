@@ -6,10 +6,10 @@
 <body>
 <p><?php
 
-if (is_uploaded_file($_FILES["upfile"]["tmp_name"])) {
-  if (move_uploaded_file($_FILES["upfile"]["tmp_name"], "files/" . $_FILES["upfile"]["name"])) {
-    chmod("files/" . $_FILES["upfile"]["name"], 0644);
-    echo $_FILES["upfile"]["name"] . "をアップロードしました。";
+if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
+  if (move_uploaded_file($_FILES["image"]["tmp_name"], "files/" . $_FILES["image"]["name"])) {
+    chmod("files/" . $_FILES["image"]["name"], 0644);
+    echo $_FILES["image"]["name"] . "をアップロードしました。";
   } else {
     echo "ファイルをアップロードできません。";
   }
