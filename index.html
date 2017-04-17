@@ -116,7 +116,8 @@
     <div id="upload" class="form">
       <div class="form_contents">
         <div class="form_wrap">
-          <form id="form" action="" onsubmit="upload(this);return false;">
+          <form id="form" action="upload.php" method="POST" enctype="multipart/form-data">
+          <!-- form id="form" action="https://script.google.com/macros/s/AKfycbxbmjY3fTQwSge9hpsaIhPfLJTk6SI4a82Uqt4ge5KxAAEEAsA/exec" onsubmit="sendfiles(this);return false;" -->
             <label for="name">お名前: </label>
             <input type="text" name="name" value="" id="name" />
             <label for="name">画像: </label>
@@ -127,6 +128,15 @@
           </form>
         </div>
         <script>
+          function test2(form) {
+            $.ajax({
+              type: 'POST',
+              url: $(form).attr('action'),
+              data: $(form).serialize(),
+              dataType: 'jsonp'
+            });
+            return false;
+          }
         </script>
       </div>
     </div>
@@ -144,6 +154,80 @@
     $('.countdown').html('あと ' + count + '日');
   });
   </script>
+
+  <script>
+    //グローバル変数
+    var dufname = "";      //画像ファイル名を格納する
+    var dataUrl = "";      //画像ファイルデータを格納する
+
+    function sendfiles(form){
+      //基礎データ用の配列を用意
+      var upfile = [];
+      //var validata = "";
+
+      //基礎データをpushする
+      //validata = document.getElementById("folder").value;
+      //if(validata == ""){
+      //  alert("アップ先フォルダのIDが入っていませんよ。");
+      //  document.getElementById("folder").focus();
+      //  return 0;
+      //}else{
+      //  upfile.push(validata);
+      //}
+
+      //ファイル名とデータを格納する
+      upfile.push(dataUrl);
+      upfile.push(dufname);
+
+      //GAS側へデータを送る
+      //google.script.run.withSuccessHandler(retmsg).uploadman(upfile);
+      console.log($(form).attr('action'));
+      console.log(dataUrl.split(',')[1]);
+      $.ajax({
+        type: 'POST',
+        url: $(form).attr('action'),
+        data: 'image='+dufname,//dataUrl.split(',')[1],
+        dataType: 'jsonp'
+      });
+      return false;
+
+      //プログレス表記に変える
+      //document.getElementById("mainform").style.display="none";
+      //document.getElementById("progress").style.display="block";
+
+    }
+
+    //サーバー側からのメッセージを表示
+    function retmsg(data){
+      //データを受け取る
+      var json = JSON.parse(data);
+
+      //ステータスに応じて処理を分岐
+      if(json[0] == "OK"){
+        document.getElementById("progress").innerHTML = json[1];
+      }else{
+        //プログレス表記を終了する
+        document.getElementById("mainform").style.display="block";
+        document.getElementById("progress").style.display="none"; 
+        alert(json[1]);
+      }
+    }
+
+    //画像ファイル選択時にイベントを実行する
+    $(function($) {
+      $('#image').change(function(e) {
+        var file = e.target.files[0];
+        dufname = file.name;
+        var reader = new FileReader();
+        //ファイルの読込が終了した時の処理
+        reader.onload = function(){
+          dataUrl = reader.result;
+        }
+        reader.readAsDataURL(file)
+      });
+    },false);
+  </script>
+
   <script src="https://apis.google.com/js/client.js"></script>
   <script>
     var googleDriveClient;
