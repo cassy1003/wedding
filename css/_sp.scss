@@ -1,0 +1,133 @@
+
+@media screen and (max-width:760px) {
+  .kazari {
+    top: 32px;
+    width: 170px;
+    &-bg {
+      display: none;
+    }
+  }
+  #sub {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0px;
+    border: none;
+    padding: 0px;
+    text-align: center;
+    .logo {
+      display: none;
+      &.small {
+        display: block;
+        padding: 10px 0px 0px;
+        img {
+          width: 80%;
+          border-top: 3px solid #fff;
+          border-bottom: 3px solid #fff;
+        }
+      }
+    }
+    .countdown {
+      display: none;
+    }
+  }
+  #main {
+    float: none;
+    width: auto;
+  }
+  .contents {
+    &#save-the-date {
+      left: calc(50vw - 200px);
+    }
+    &#announce {
+      width: 80vw;
+      left: 10vw;
+      transform: rotate(10deg);
+      h1 {
+        font-size: 4vw;
+      }
+    }
+    &#detail {
+      width: 80vw;
+      left: 10vw;
+      top: 850px;
+    }
+    .bg img {
+      &#starfish {
+        right: 50px;
+      }
+      &#sunglass {
+        width: 100px;
+      }
+      &#drink1 {
+        width: 30px;
+        bottom: 20px;
+      }
+      &#drink2 {
+        width: 40px;
+        right: 82px;
+        bottom: 20px;
+      }
+    }
+  }
+  .black_board section {
+    padding-right: 10px;
+    .title ~ p {
+      padding-left: 15px;
+    }
+  }
+  #pagetop {
+    padding-top: 10px;
+    padding-bottom: 50px;
+    a {
+      line-height: 24px;
+      margin-right: 10px;
+    }
+  }
+}
+
+@media screen and (max-width:600px) {
+  br.sp {
+    display: block;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .contents {
+    &#save-the-date, &#announce, &#detail {
+      width: 85vw;
+      position: relative;
+      margin: 30px auto;
+      transform: none;
+      left: initial;
+      top: initial;
+    }
+    .bg img{
+      &#starfish {
+        right: 10px;
+      }
+      &#sunglass {
+        width: 65px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:425px) {
+  .contents .bg img{
+    &#shell1 {
+      display: none;
+    }
+    &#shell2 {
+      display: none;
+    }
+  }
+  .not_sp_s {
+    display: none;
+  }
+  br {
+    &.sp_s {
+      display: block;
+    }
+  }
+}

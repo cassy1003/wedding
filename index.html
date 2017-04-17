@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Takahiro and Akari's wedding After party Information">
 <meta name="keywords" content="">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <!--[if lt IE 9]>
@@ -16,48 +17,261 @@
 </head>
 
 <body>
-  <div id="sh">
-    <h1 class="logo"><a href="index.html"><img src="images/wedding_after_party_s.png"></a></h1>
+  <img src="images/bg1.png" class="kazari">
+  <img src="images/kusa.png" class="kazari kazari-bg">
+
+  <div id="sub">
+    <div class="logo normal"><img src="images/wedding_after_party.png"></div>
+    <div class="logo small"><img src="images/wedding_after_party_s.png"></div>
+    <p class="countdown"></p>
   </div>
 
-  <div id="container">
-    <div id="main">
+  <p id="form_open"><a onclick="$('body').addClass('form');return false;">出欠フォーム</a></p>
+
+  <div id="main">
+    <div id="save-the-date" class="contents">
+      <img src="images/save_the_date_pin.png">
+    </div>
+    <div id="announce" class="black_board contents">
+      <div class="bg">
+        <img src="images/shell1.png" id="shell1">
+        <img src="images/shell2.png" id="shell2">
+        <img src="images/starfish.png" id="starfish">
+      </div>
       <section>
+        <h1>結婚披露パーティーのお知らせ</h1>
         <p>突然のご報告ではありますが、</p>
         <p>私たち柏木隆宏と杉山明里は、この度結婚することになりました。</p>
-        <p>つきましては、ささやかではございますが、</p>
-        <p>皆様をお招きしての二次会パーティーを開催したいと思います。</p>
+        <p>つきましては、ささやかではございますが、<br class="not_sp_s">
+           皆様をお招きして結婚披露パーティーを開催したいと思います。</p>
         <p>是非ご参加いただけますようお願いいたします。</p>
-        <p>場所は都内、時間は17時ごろからを予定しております。</p>
-        <p>詳細が決まり次第、再度連絡させていただきます。</p>
       </section>
     </div>
-    <div id="sub">
-      <h1 class="logo"><a href="index.html"><img src="images/wedding_after_party.png"></a></h1>
+    <div id="detail" class="black_board contents">
+      <div class="bg">
+        <img src="images/sunglass.png" id="sunglass">
+        <img src="images/drink1.png" id="drink1">
+        <img src="images/drink2.png" id="drink2">
+      </div>
+      <section>
+        <h1>パーティー詳細</h1>
+        <p class="title">日時</p>
+        <p class="u red">2017.07.22(土)</p>
+        <p>受付開始 17:00 <br class="sp"> (開宴 17:30 | 終宴 19:30)</p>
+        <p class="title">場所</p>
+        <p>東京都千代田区有楽町1-5-2 <br class="sp"> 東宝ツインタワービル地下</p>
+        <p class="u red">Club DIANA</p>
+        <p>東京メトロ <br class="sp_s">日比谷駅 A5出口付近</p>
+        <p><span class="not_sp_s">東京メトロ </span>銀座駅 C1出口より徒歩3分</p>
+        <p>JR <br class="sp_s">有楽町駅 日比谷口より徒歩3分</p>
+        <p class="title">会費</p>
+        <p>7000円</p>
+      </section>
     </div>
 
-    <!-- p id="pagetop"><a href="#">Information</a></p -->
+    <p class="form_name">参加確認フォーム</p>
+    <div class="form">
+      <div class="form_contents">
+        <div class="form_wrap">
+          <form action="https://script.google.com/macros/s/AKfycbzIIEPV_mv1Bk-jA12ZHXZk49T_-3_92YuMVbGBSVwl273pSlQ/exec" onsubmit="test(this);return false;">
+            <input type="hidden" name="SPREADSHEET_ID" value="1Mp914nCYkcETazdRYvJistSHr7J324AOguTvHv4vm4Q">
+            <input type="hidden" name="SHEET_NAME" value="参加フォーム">
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-default">
+                <input name="join" value="true" type="radio" checked="checked">参加
+                <img src="images/maru_2.png" class="check_maru maru_1">
+              </label>
+              <label class="btn btn-default">
+                <input name="join" value="false" type="radio">不参加
+                <img src="images/maru_2.png" class="check_maru maru_2">
+              </label>
+              <label class="btn btn-default">
+                <input name="join" value="pending" type="radio">保留
+                <img src="images/maru_2.png" class="check_maru maru_3">
+              </label>
+            </div>
+            <label for="name">お名前 (ニックネーム): </label>
+            <input type="text" name="name" value="" id="name" required />
+            <label for="email">連絡先 (LINE or EMAIL): </label>
+            <input type="text" name="email" value="" id="email" required />
+            <label for="email">メッセージ (何でもお書きください): </label>
+            <textarea  name="message" value="Your Message" id="message" required ></textarea>
+            <input type="submit" name ="submit" value="Send Message!" />
+          </form>
+        </div>
+        <script>
+          function test(form) {
+            $.ajax({
+              type: 'POST',
+              url: $(form).attr('action'),
+              data: $(form).serialize(),
+              dataType: 'jsonp'
+            });
+            return false;
+          }
+        </script>
+      </div>
+    </div>
 
-    <footer>
-      <SCRIPT LANGUAGE="JavaScript">
-      var now = new Date();
-      var xday = new Date('2017/07/22');
-      count = Math.ceil( (xday.getTime() - now.getTime()) / (24*60*60*1000) );
-      document.write("<FONT style='font-size : 16px; color : white'>");
-      document.write("結婚式まであと " + count + "日</FONT>");
-      </SCRIPT>
-    </footer>
+    <div id="upload" class="form">
+      <div class="form_contents">
+        <div class="form_wrap">
+          <form id="form" action="" onsubmit="upload(this);return false;">
+            <label for="name">お名前: </label>
+            <input type="text" name="name" value="" id="name" />
+            <label for="name">画像: </label>
+            <input type="file" name="image" value="" id="image" accept="image/*" />
+            <label for="email">メッセージ: </label>
+            <textarea  name="message" value="Your Message" id="message" ></textarea>
+            <input type="submit" name ="submit" value="Send Message!" />
+          </form>
+        </div>
+        <script>
+        </script>
+      </div>
+    </div>
+
   </div>
 
-  <img src="images/bg1.png" id="kazari">
-  <img src="images/kusa.png" id="kazari-bg">
-  <img src="images/save_the_date_pin.png" id="save-the-date">
-  <img src="images/after_party_info.png" id="after-party-info">
+  <!-- footer>
+  </footer -->
+
 
   <script>
-    setTimeout(function(){
-      $('#after-party-info').addClass('visible');
-    }, 3500)
+  $(function(){
+    // カウントダウン
+    var count = Math.ceil( (new Date('2017/07/22') - new Date()) / (24*60*60*1000) );
+    $('.countdown').html('あと ' + count + '日');
+  });
+  </script>
+  <script src="https://apis.google.com/js/client.js"></script>
+  <script>
+    var googleDriveClient;
+    getGoogleAuth().then(loadGoogleDrive).then(function(gClient){
+        googleDriveClient = gClient;
+    });
+
+    // google driveのクライアントの生成
+    function loadGoogleDrive() {
+      var p = new Promise(function(resolve, reject) {
+        try {
+          window.gapi.client.load('drive', 'v3', fncOnDriveApiLoad);
+        } catch (e) {
+          reject(e);
+        }
+        function fncOnDriveApiLoad() {
+          resolve(window.gapi.client);
+        }
+      });
+      return p;
+    }
+
+    // Google認証
+    function getGoogleAuth() {
+      var objAuthParam = {
+        // クライアントIDはGoogle API consoleで取得してください
+        'client_id': '655079260460-ea8979mmtse9gdg5ifi7g99h3p2tfm8k.apps.googleusercontent.com',
+        'scope': ['https://www.googleapis.com/auth/drive'],
+        'immediate': false
+      };
+      var p = new Promise(function(resolve, reject) {
+          window.gapi.load('auth', {
+              'callback': function () {
+                  window.gapi.auth.authorize(
+                      objAuthParam,
+                      authResult);
+              }
+          });
+          function authResult(objAuthResult) {
+              if (objAuthResult && !objAuthResult.error) {
+                  resolve(objAuthResult.access_token);
+              } else {
+                  // auth failed.
+                  reject(objAuthResult);
+              }
+          }
+      });
+      return p;
+    }
+
+    // ファイルアップロード
+    function uploadFile(gClient, base64FileData, fileName, fileType) {
+        // 固定文
+        const boundary = '-------314159265358979323846';
+        const delimiter = '\r\n--' + boundary + '\r\n';
+        const closeDelim = '\r\n--' + boundary + '--';
+        const contentType = fileType;
+
+        // アップロード先のフォルダ指定など
+        var metadata = {
+            'name': fileName,
+            'mimeType': contentType
+        };
+        var multipartRequestBody =
+            delimiter +
+            'content-type: application/json; charset=UTF-8\r\n\r\n' +
+            JSON.stringify(metadata) +
+            delimiter +
+            'content-transfer-encoding: base64\r\n' +
+            'content-type: ' + contentType + '\r\n\r\n' +
+            base64FileData +
+            closeDelim;
+        var request = gClient.request({
+            'path': '/wedding',
+            'method': 'POST',
+            'params': {
+                'uploadType': 'multipart'
+            },
+            'headers': {
+                'Content-Type': 'multipart/related; boundary="' + boundary + '"'
+            },
+            'body': multipartRequestBody
+        });
+        try {
+            request.execute(function (objFile) {
+                console.log(objFile);
+                console.info('upload success !');
+            });
+        } catch (e) {
+            console.error(e);
+        }
+    }
+
+    function upload(form) {
+      var file = $(form).find('input[name=image]').prop('files')[0];
+      console.log(file.name);
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        // base64データのデータ本部を抽出
+        var arraySplitBase64 = reader.result.split(',');
+        // file upload
+        //uploadFile(googleDriveClient, arraySplitBase64[1], file.name, file.type);
+      };
+      reader.readAsDataURL(file);
+    }
+
+    // ドロップした時のイベント
+    function drop(event) {
+      if (event.dataTransfer && event.dataTransfer.files instanceof FileList && event.dataTransfer.files.length > 0) {
+        // サンプルとして1ファイルのみとする
+        var file = event.dataTransfer.files[0];
+        var reader = new FileReader();
+        // バイナリファイルをbase64に変換
+        reader.readAsDataURL(file);
+        reader.onload = function(e) {
+          var arraySplitBase64 = '';
+          if (typeof reader.result === 'string') {
+            // base64データのデータ本部を抽出
+            arraySplitBase64 = reader.result.split(',');
+            // file upload
+            uploadFile(googleDriveClient, arraySplitBase64[1], file.name, file.type);
+          } else {
+            throw 'read file error';
+          }
+        };
+      }
+      event.preventDefault();
+    }
   </script>
 
 </body>
