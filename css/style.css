@@ -68,6 +68,18 @@ br.sp, br.sp_s {
   text-decoration-color: LightCoral;
 }
 
+.l {
+  text-align: left;
+}
+
+.r {
+  text-align: right;
+}
+
+.c {
+  text-align: center;
+}
+
 .kazari {
   position: absolute;
   left: 0px;
@@ -373,21 +385,24 @@ br.sp, br.sp_s {
   z-index: 1;
   position: absolute;
   top: 1880px;
-  left: 158px;
+  left: 135px;
   font-size: 30px;
   font-weight: bold;
   color: white;
+  transform: rotate(5deg);
 }
 
 .form {
   display: block;
   position: absolute;
   top: 1500px;
+  left: 0px;
   height: 450px;
   -webkit-transition: all .5s ease-in-out .3s;
   -moz-transition: all .5s ease-in-out .3s;
   -o-transition: all .5s ease-in-out .3s;
   transition: all .5s ease-in-out .3s;
+  transform: rotate(5deg);
 }
 .form .form_contents {
   width: 530px;
@@ -498,6 +513,7 @@ br.sp, br.sp_s {
 }
 .form:hover {
   top: 1370px;
+  left: 11px;
 }
 .form:hover .form_wrap {
   height: 776px;
@@ -545,14 +561,33 @@ br.sp, br.sp_s {
 #upload {
   position: absolute;
   top: 2050px;
-  left: -300px;
+  left: -390px;
+  width: 800px;
 }
-#upload:hover {
-  top: 1996px;
+#upload .border {
+  position: absolute;
+  left: 0px;
+  bottom: 9px;
+  width: 295px;
+  height: 246px;
+  box-shadow: inset 3px -3px 3px rgba(0, 0, 0, 0.7);
 }
-#upload:hover .form_wrap {
-  height: 700px;
+#upload .memo {
+  position: absolute;
+  top: 180px;
+  left: 385px;
+  transform: rotate(-13deg);
 }
-#upload input#image {
-  width: 320px;
+#upload form {
+  width: 300px;
+}
+#upload form input[name=name] {
+  width: 200px;
+}
+#upload form input[name=submit] {
+  width: 200px;
+  border: 1px solid lightgray;
+  background: white;
+  box-shadow: 3px 3px 3px grey;
+  cursor: pointer;
 }

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Wedding After Party Information</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Takahiro and Akari's wedding After party Information">
+<meta name="description" content="Takahiro and Akari's Wedding After Party Information">
 <meta name="keywords" content="">
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -26,7 +26,9 @@
     <p class="countdown"></p>
   </div>
 
-  <p id="form_open"><a onclick="$('body').addClass('form');return false;">出欠フォーム</a></p>
+  <!--
+  <p id="form_open"><a>参加確認フォーム</a></p>
+  -->
 
   <div id="main">
     <div id="save-the-date" class="contents">
@@ -73,7 +75,7 @@
     <div class="form">
       <div class="form_contents">
         <div class="form_wrap">
-          <form action="https://script.google.com/macros/s/AKfycbzIIEPV_mv1Bk-jA12ZHXZk49T_-3_92YuMVbGBSVwl273pSlQ/exec" onsubmit="test(this);return false;">
+          <form action="https://script.google.com/macros/s/AKfycbzIIEPV_mv1Bk-jA12ZHXZk49T_-3_92YuMVbGBSVwl273pSlQ/exec" onsubmit="send_form(this);return false;">
             <input type="hidden" name="SPREADSHEET_ID" value="1Mp914nCYkcETazdRYvJistSHr7J324AOguTvHv4vm4Q">
             <input type="hidden" name="SHEET_NAME" value="参加フォーム">
             <div class="btn-group" data-toggle="buttons">
@@ -100,46 +102,31 @@
           </form>
         </div>
         <script>
-          function test(form) {
-            $.ajax({
-              type: 'POST',
-              url: $(form).attr('action'),
-              data: $(form).serialize(),
-              dataType: 'jsonp'
-            });
-            return false;
-          }
         </script>
       </div>
     </div>
 
-    <div id="upload" class="form">
-      <div class="form_contents">
-        <div class="form_wrap">
-          <form id="form" action="upload.php" method="POST" enctype="multipart/form-data">
+    <div id="upload">
+      <img src="images/album.png" />
+      <div class="border"></div>
+      <div class="memo">
+        <p>新郎もしくは新婦との思い出の写真を<br>以下から是非送ってください！</p>
+        <p>公開しても大丈夫な写真にしてくださいね。笑</p>
+        <form id="form" action="upload.php" method="POST" enctype="multipart/form-data">
+          <div class="l">
             <label for="name">お名前: </label>
             <input type="text" name="name" value="" id="name" />
+          </div>
+          <div class="r">
             <label for="name">画像: </label>
             <input type="file" name="image" value="" id="image" accept="image/*" />
-            <label for="email">メッセージ: </label>
-            <textarea  name="message" value="Your Message" id="message" ></textarea>
-            <input type="submit" name ="submit" value="Send Message!" />
-          </form>
-        </div>
-        <script>
-          function test2(form) {
-            $.ajax({
-              type: 'POST',
-              url: $(form).attr('action'),
-              data: $(form).serialize(),
-              dataType: 'jsonp'
-            });
-            return false;
-          }
-        </script>
+          </div>
+          <div class="c">
+            <input type="submit" name ="submit" value="送信!" />
+          </div>
+        </form>
       </div>
     </div>
-
   </div>
 
   <!-- footer>
@@ -151,6 +138,17 @@
     // カウントダウン
     var count = Math.ceil( (new Date('2017/07/22') - new Date()) / (24*60*60*1000) );
     $('.countdown').html('あと ' + count + '日');
+
+    // 参加確認フォーム送信
+    function send_form(form) {
+      $.ajax({
+        type: 'POST',
+        url: $(form).attr('action'),
+        data: $(form).serialize(),
+        dataType: 'jsonp'
+      });
+      return false;
+    }
   });
   </script>
 
