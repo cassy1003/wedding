@@ -105,9 +105,49 @@
         </script>
       </div>
     </div>
+    <div class="form form_sp">
+      <div class="orm_contents">
+        <div class="orm_wrap">
+          <form action="https://script.google.com/macros/s/AKfycbzIIEPV_mv1Bk-jA12ZHXZk49T_-3_92YuMVbGBSVwl273pSlQ/exec" onsubmit="send_form(this);return false;">
+            <input type="hidden" name="SPREADSHEET_ID" value="1Mp914nCYkcETazdRYvJistSHr7J324AOguTvHv4vm4Q">
+            <input type="hidden" name="SHEET_NAME" value="参加フォーム">
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-default">
+                <input name="join" value="true" type="radio" checked="checked">参加
+                <img src="images/maru_2.png" class="check_maru maru_1">
+              </label>
+              <label class="btn btn-default">
+                <input name="join" value="false" type="radio">不参加
+                <img src="images/maru_2.png" class="check_maru maru_2">
+              </label>
+              <label class="btn btn-default">
+                <input name="join" value="pending" type="radio">保留
+                <img src="images/maru_2.png" class="check_maru maru_3">
+              </label>
+            </div>
+            <div>
+            <label for="name">お名前 (ニックネーム): </label>
+            <input type="text" name="name" value="" id="name" required />
+            </div>
+            <div>
+            <label for="email">連絡先 (LINE or EMAIL): </label>
+            <input type="text" name="email" value="" id="email" required />
+            </div>
+            <div>
+            <label for="email">メッセージ (何でもお書きください): </label>
+            <textarea  name="message" value="Your Message" id="message" required ></textarea>
+            </div>
+            <input type="submit" name ="submit" value="Send Message!" />
+          </form>
+        </div>
+        <script>
+        </script>
+      </div>
+    </div>
 
     <div id="upload">
-      <img src="images/album.png" />
+      <img class="normal" src="images/album.png" />
+      <img class="small" src="images/album_s.png" />
       <div class="border"></div>
       <div class="memo">
         <p>新郎もしくは新婦との思い出の写真を<br>以下から是非送ってください！</p>

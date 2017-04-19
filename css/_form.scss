@@ -2,7 +2,8 @@
   z-index: 1;
   position: absolute;
   top: 1880px;
-  left: 135px;
+  right: 250px;
+  width: 250px;
   font-size: 30px;
   font-weight: bold;
   color: white;
@@ -13,7 +14,7 @@
   display: block;
   position: absolute;
   top: 1500px;
-  left: 0px;
+  right: 100px;
   height: 450px;
   -webkit-transition: all .5s ease-in-out .3s;
   -moz-transition: all .5s ease-in-out .3s;
@@ -130,7 +131,7 @@
   }
   &:hover {
     top: 1370px;
-    left: 11px;
+    right: 89px;
     .form_wrap {
       height: 776px;
       top: -200px;
@@ -177,6 +178,9 @@
       }
     }
   }
+  &_sp {
+    display: none;
+  }
 }
 
 #upload {
@@ -184,6 +188,15 @@
   top: 2050px;
   left: -390px;
   width: 800px;
+  padding-bottom: 10px;
+  img {
+    &.normal {
+      display: block;
+    }
+    &.small {
+      display: none;
+    }
+  }
   .border {
     position: absolute;
     left: 0px;
@@ -196,7 +209,7 @@
     position: absolute;
     top: 180px;
     left: 385px;
-    transform: rotate(-13deg);
+    transform: rotate(-14deg);
   }
   form {
     width: 300px;
@@ -212,4 +225,3 @@
     }
   }
 }
-

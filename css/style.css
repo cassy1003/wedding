@@ -381,11 +381,21 @@ br.sp, br.sp_s {
     display: block;
   }
 }
+@media screen and (max-width: 375px) {
+  .kazari {
+    display: none;
+  }
+
+  .contents .bg img#sunglass {
+    top: 80px;
+  }
+}
 .form_name {
   z-index: 1;
   position: absolute;
   top: 1880px;
-  left: 135px;
+  right: 250px;
+  width: 250px;
   font-size: 30px;
   font-weight: bold;
   color: white;
@@ -396,7 +406,7 @@ br.sp, br.sp_s {
   display: block;
   position: absolute;
   top: 1500px;
-  left: 0px;
+  right: 100px;
   height: 450px;
   -webkit-transition: all .5s ease-in-out .3s;
   -moz-transition: all .5s ease-in-out .3s;
@@ -513,7 +523,7 @@ br.sp, br.sp_s {
 }
 .form:hover {
   top: 1370px;
-  left: 11px;
+  right: 89px;
 }
 .form:hover .form_wrap {
   height: 776px;
@@ -557,12 +567,22 @@ br.sp, br.sp_s {
 .form .btn-group label .check_maru {
   display: none;
 }
+.form_sp {
+  display: none;
+}
 
 #upload {
   position: absolute;
   top: 2050px;
   left: -390px;
   width: 800px;
+  padding-bottom: 10px;
+}
+#upload img.normal {
+  display: block;
+}
+#upload img.small {
+  display: none;
 }
 #upload .border {
   position: absolute;
@@ -576,7 +596,7 @@ br.sp, br.sp_s {
   position: absolute;
   top: 180px;
   left: 385px;
-  transform: rotate(-13deg);
+  transform: rotate(-14deg);
 }
 #upload form {
   width: 300px;
@@ -590,4 +610,146 @@ br.sp, br.sp_s {
   background: white;
   box-shadow: 3px 3px 3px grey;
   cursor: pointer;
+}
+
+@media screen and (max-width: 760px) {
+  #upload {
+    left: -275px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .form {
+    right: calc(50vw - 275px);
+  }
+  .form_name {
+    right: calc(50vw - 125px);
+  }
+  .form:hover {
+    right: calc(50vw - 285px);
+  }
+}
+@media screen and (max-width: 560px) {
+  .form_name {
+    width: 240px;
+    top: 1565px;
+    right: calc(50vw - 120px);
+    color: black;
+    transform: rotate(0deg);
+  }
+
+  .form {
+    display: none;
+  }
+  .form_sp {
+    position: absolute;
+    display: block;
+    top: 1500px;
+    right: 5vw;
+    width: 90vw;
+    height: initial;
+    margin: 60px 0px;
+    text-align: center;
+    transform: initial;
+    box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.3);
+    background: #f7f2ec url("../images/letter_bg.png");
+    padding-top: 50px;
+  }
+  .form_sp form {
+    padding: 16px;
+  }
+  .form_sp form > div {
+    margin-bottom: 20px;
+  }
+  .form_sp form .btn-group {
+    width: 100%;
+  }
+  .form_sp form input[type=text] {
+    width: 90%;
+    height: 30px;
+  }
+  .form_sp form textarea {
+    width: 90%;
+    height: 100px;
+  }
+  .form_sp form input[name=submit] {
+    width: 50%;
+    height: 30px;
+    border: 1px solid lightgray;
+    background: white;
+    box-shadow: 3px 3px 3px grey;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  .form:hover {
+    top: 1500px;
+    right: 5vw;
+  }
+  .form .btn-group label input:checked + .check_maru {
+    height: 32px;
+  }
+  .form .btn-group label input:checked + .check_maru.maru_1 {
+    left: 7px;
+  }
+  .form .btn-group label input:checked + .check_maru.maru_2 {
+    left: 12px;
+  }
+  .form .btn-group label input:checked + .check_maru.maru_3 {
+    left: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .form_name {
+    position: relative;
+    top: 30px;
+    right: initial;
+    margin: auto;
+  }
+
+  .form_sp {
+    position: relative;
+    top: initial;
+    right: initial;
+    margin: -40px auto 30px;
+  }
+  .form_sp:hover {
+    top: initial;
+    right: initial;
+  }
+
+  #upload {
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    top: initial;
+    left: initial;
+    height: 375px;
+    width: 100%;
+    overflow: hidden;
+  }
+  #upload img.small {
+    display: none;
+  }
+  #upload img.normal {
+    display: none;
+  }
+  #upload img.small {
+    display: block;
+    position: absolute;
+    left: -21px;
+    top: 23px;
+    transform: rotate(14deg);
+  }
+  #upload .border {
+    display: none;
+  }
+  #upload .memo {
+    font-size: 13px;
+    transform: rotate(0deg);
+    left: 13%;
+  }
+}
+@media screen and (max-width: 440px) {
+  #upload {
+    display: none;
+  }
 }

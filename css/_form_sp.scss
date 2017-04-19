@@ -1,0 +1,147 @@
+
+@media screen and (max-width:760px) {
+  #upload {
+    left: -275px;
+  }
+}
+
+@media screen and (max-width:660px) {
+  .form {
+    right: calc(50vw - 275px);
+    &_name {
+      right: calc(50vw - 125px);
+    }
+    &:hover {
+      right: calc(50vw - 285px);
+    }
+  }
+}
+
+@media screen and (max-width:560px) {
+  .form_name {
+    width: 240px;
+    top: 1565px;
+    right: calc(50vw - 120px);
+    color: black;
+    transform: rotate(0deg);
+  }
+  .form {
+    display: none;
+    &_sp {
+      position: absolute;
+      display: block;
+      top: 1500px;
+      right: 5vw;
+      width: 90vw;
+      height: initial;
+      margin: 60px 0px;
+      text-align: center;
+      transform: initial;
+      box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.3);
+      background: #f7f2ec url('../images/letter_bg.png');
+      padding-top: 50px;
+      form {
+        padding: 16px;
+        > div {
+          margin-bottom: 20px;
+        }
+        .btn-group {
+          width: 100%;
+        }
+        input[type=text] {
+          width: 90%;
+          height: 30px;
+        }
+        textarea {
+          width: 90%;
+          height: 100px;
+        }
+        input[name=submit] {
+          width: 50%;
+          height: 30px;
+          border: 1px solid lightgray;
+          background: white;
+          box-shadow: 3px 3px 3px grey;
+          cursor: pointer;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    &:hover {
+      top: 1500px;
+      right: 5vw;
+    }
+    .btn-group label input:checked + .check_maru {
+      height: 32px;
+      &.maru_1 {
+        left: 7px;
+      }
+      &.maru_2 {
+        left: 12px;
+      }
+      &.maru_3 {
+        left: 10px;
+      }
+    }
+  }
+
+}
+
+
+@media screen and (max-width:480px) {
+  .form_name {
+    position: relative;
+    top: 30px;
+    right: initial;
+    margin: auto;
+  }
+  .form_sp {
+    position: relative;
+    top: initial;
+    right: initial;
+    margin: -40px auto 30px;
+    &:hover {
+      top: initial;
+      right: initial;
+    }
+  }
+  #upload {
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    top: initial;
+    left: initial;
+    height: 375px;
+    width: 100%;
+    overflow: hidden;
+    img.small {
+      display: none;
+    }
+    img {
+      &.normal {
+        display: none;
+      }
+      &.small {
+        display: block;
+        position: absolute;
+        left: -21px;
+        top: 23px;
+        transform: rotate(14deg);
+      }
+    }
+    .border {
+      display: none;
+    }
+    .memo {
+      font-size: 13px;
+      transform: rotate(0deg);
+      left: 13%;
+    }
+  }
+}
+
+@media screen and (max-width:440px) {
+  #upload {
+    display: none;
+  }
+}

@@ -131,3 +131,12 @@
     }
   }
 }
+
+@media screen and (max-width:375px) {
+  .kazari {
+    display: none;
+  }
+  .contents .bg img#sunglass {
+    top: 80px;
+  }
+}
