@@ -12,12 +12,12 @@ body {
   font-family:"katyou", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 16px;
   line-height: 2;
-  background: #111 url(../images/bg.jpg) repeat center top/300px scroll;//fixed;
+  background: #fff url(../images/bg.jpg) repeat center top/300px scroll;//fixed;
   -webkit-text-size-adjust: none;
 }
 @media screen and (max-width:800px) {
   body {
-    background: #111 url(../images/bg.jpg) repeat center top/300px scroll;
+    background: #fff url(../images/bg.jpg) repeat center top/300px scroll;
   }
 }
 h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;}

@@ -58,6 +58,7 @@
         }
         input[name=submit] {
           width: 50%;
+          min-width: 200px;
           height: 30px;
           border: 1px solid lightgray;
           background: white;
@@ -142,6 +143,32 @@
 
 @media screen and (max-width:440px) {
   #upload {
-    display: none;
+    background: #f7f2ec url("../images/letter_bg.png");
+    margin: auto;
+    width: 90vw;
+    height: initial;
+    text-align: center;
+    margin-bottom: 50px;
+    &:before {
+      content: '思い出の写真';
+      position: relative;
+      top: 20px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    img.small {
+      display: none;
+    }
+    .memo {
+      position: static;
+      text-align: left;
+      padding: 10px;
+      form {
+        width: initial;
+        .r {
+          text-align: left;
+        }
+      }
+    }
   }
 }

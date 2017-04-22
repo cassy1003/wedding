@@ -1,8 +1,5 @@
 
 @media screen and (max-width:760px) {
-  body {
-    font-family: Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif;
-  }
   .kazari {
     top: 32px;
     width: 170px;
@@ -96,6 +93,9 @@
 }
 
 @media screen and (max-width:480px) {
+  body {
+    font-family: Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif;
+  }
   .contents {
     &#save-the-date, &#announce, &#detail {
       width: 85vw;
