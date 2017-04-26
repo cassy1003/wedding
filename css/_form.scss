@@ -1,174 +1,28 @@
-.form_name {
-  z-index: 1;
-  position: absolute;
-  top: 1880px;
-  right: 250px;
-  width: 250px;
-  font-size: 30px;
-  font-weight: bold;
-  color: white;
-  transform: rotate(5deg);
-}
 
-.form {
-  display: block;
-  position: absolute;
-  top: 1500px;
-  right: 100px;
-  height: 450px;
-  -webkit-transition: all .5s ease-in-out .3s;
-  -moz-transition: all .5s ease-in-out .3s;
-  -o-transition: all .5s ease-in-out .3s;
-  transition: all .5s ease-in-out .3s;
-  transform: rotate(5deg);
-  .form_contents {
-    width: 530px;
-    margin: 20px auto 0;
-    height: 445px;
-    .form_wrap {
-      overflow: hidden;
-      height: 446px;
-      position: relative;
-      top: 0px;
-      z-index: 0;
-      -webkit-transition: all .5s ease-in-out .3s;
-      -moz-transition: all .5s ease-in-out .3s;
-      -o-transition: all .5s ease-in-out .3s;
-      transition: all .5s ease-in-out .3s;
-      &:before {
-        content: "";
-        position: absolute;
-        bottom: 126px;
-        left: 0px;
-        background: url('../images/before_pin.png');
-        width: 530px;
-        height: 316px;
-      }
-      &:after {
-        content: "";
-        position: absolute;
-        bottom: -2px;
-        left: 0px;
-        background: url('../images/after.png');
-        width: 530px;
-        height: 260px;
-      }
-      form {
-        background: #f7f2ec url('../images/letter_bg.png');
-        position: relative;
-        top: 198px;
-        overflow: hidden;
-        height: 530px;
-        width:400px;
-        margin: 0px auto;
-        padding: 20px;
-        border: 1px solid #fff;
-        border-radius: 3px;
-        -moz-border-radius: 3px;
-        -webkit-border-radius: 3px;
-        box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 27px #fff;
-        -moz-box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 14px #fff;
-        -webkit-box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 27px #fff;
-        label {
-          margin: 11px 20px 0 0;
-          font-size: 16px;
-          color: darkgoldenrod;
-          text-transform: uppercase;
-          text-shadow: 0px 1px 0px #fff;
-          &.radio {
-            vertical-align: top;
-            margin-right: 0px;
-          }
-        }
-        input[type=text], textarea {
-          font: 14px normal normal uppercase helvetica, arial, serif;
-          color: #7c7873;
-          background: none;
-          width: 380px;
-          height: 36px;
-          padding: 0px 10px;
-          margin: 0 0 10px 0;
-          border: 1px solid #f8f5f1;
-          -moz-border-radius: 5px;
-          -webkit-border-radius: 5px;
-          border-radius: 5px;
-          -moz-box-shadow: inset 0px 0px 1px #726959;
-          -webkit-box-shadow:  inset 0px 0px 1px #b3a895;
-          box-shadow:  inset 0px 0px 1px #b3a895;
-        }
-        input[type=radio] {
-          color: #7c7873;
-          width: 60px;
-          height: 25px;
-        }
-        textarea {
-          height: 80px;
-          padding-top: 14px;
-        }
-        textarea:focus, input[type=text]:focus {
-          background: rgba(255,255,255,.35);
-        }
-        input[type=submit] {
-          position: relative;
-          font-family: 'YanoneKaffeesatzRegular';
-          font-size: 24px;
-          color: #7c7873;
-          text-shadow: 0 1px 0 #fff;
-          width: 100%;
-          text-align: center;
-          opacity: 0;
-          background: none;
-          cursor: pointer;
-          -webkit-transition: opacity .6s ease-in-out .4s;
-          -moz-transition: opacity .6s ease-in-out .4s;
-          -o-transition: opacity .6s ease-in-out .4s;
-          transition: opacity .6s ease-in-out .4s;
-          border: none;
-        }
-      }
-    }
-  }
-  &:hover {
-    top: 1370px;
-    right: 89px;
-    .form_wrap {
-      height: 776px;
-      top: -200px;
-      form {
-        input[type=submit] {
-          z-index:1;
-          opacity: 1;
-        }
-        input:hover[type=submit] {
-          color: #435c70;
-        }
-      }
-    }
-  }
-
-  .btn-group {
-    display: inline-block;
+.form_contents {
+  text-align: center;
+  .attend {
+    width: 100%;
+    display: table;
     vertical-align: middle;
-    width: 380px;
     label {
+      display: table-cell;
       text-decoration: underline;
-      cursor: pointer;
       position: relative;
+      span {
+        position: relative;
+        cursor: pointer;
+        padding: 10px;
+      }
       input {
-        opacity: 0;
-        &:checked + .check_maru {
+        margin-right: 10px;
+        &:checked ~ .check_maru {
           display: block;
-          width: 60px;
           position: absolute;
-          top: -8px;
-          &.maru_1 {
-            left: 54px;
-          }
+          top: 0px;
+          left: 3px;;
           &.maru_2 {
-            left: 58px;
-          }
-          &.maru_3 {
-            left: 53px;
+            top: -6px;
           }
         }
       }
@@ -177,50 +31,34 @@
       }
     }
   }
-  &_sp {
-    display: none;
-  }
-}
-
-#upload {
-  position: absolute;
-  top: 2050px;
-  left: -390px;
-  width: 800px;
-  padding-bottom: 10px;
-  img {
-    &.normal {
-      display: block;
+  .label {
+    padding: 10px 20px 0px;
+    text-align: center;
+    margin-bottom: 10px;
+    p {
+      text-align: left;
     }
-    &.small {
-      display: none;
+    input, textarea {
+      width: calc(100% - 20px);
+      font-size: 15px;
+      padding: 5px;
+    }
+    textarea {
+      height: 100px;
     }
   }
-  .border {
-    position: absolute;
-    left: 0px;
-    bottom: 9px;
-    width: 295px;
-    height: 246px;
-    box-shadow: inset 3px -3px 3px rgba(0,0,0, .7)
+  input[type=submit] {
+    width: 50%;
+    padding: 3px;
+    font-size: 18px;
+    cursor: pointer;
+    background: white;
+    margin: 20px;
   }
-  .memo {
-    position: absolute;
-    top: 180px;
-    left: 385px;
-    transform: rotate(-14deg);
-  }
-  form {
-    width: 300px;
-    input[name=name] {
-      width: 200px;
-    }
-    input[name=submit] {
-      width: 200px;
-      border: 1px solid lightgray;
-      background: white;
-      box-shadow: 3px 3px 3px grey;
-      cursor: pointer;
-    }
+  input[type=file] {
+    background: white;
+    color: gray;
+    font-size: 12px;
+    padding: 10px 6px;
   }
 }

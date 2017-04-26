@@ -1,0 +1,133 @@
+#main {
+  float: right;
+  width: calc(100vw - 335px);
+  position: relative;
+
+  .container {
+    width: calc(100% - 80px);
+    margin: 50px auto;
+    padding: 40px;
+
+    .contents, .contents_img {
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .contents {
+      background: rgba(0, 0, 0, 0.6);
+      padding-bottom: 15px;
+    }
+
+    h1, h2 {
+      background: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    section p {
+      font-weight: bold;
+      padding: 0px 15px;
+      text-align: left;
+      &.title {
+        ~ p {
+          padding-left: 30px;
+        }
+        padding-left: 15px !important;
+      }
+    }
+  }
+
+  .bg img {
+    position: absolute;
+    width: 40px;
+    &#shell1 {
+      top: 51px;
+      right: 51px;
+    }
+    &#shell2 {
+      top: 60px;
+      right: 11px;
+    }
+    &#starfish {
+      bottom: 11px;
+      right: 23px;
+    }
+    &#sunglass {
+      top: 51px;
+      right: 20px;
+      width: 80px;
+    }
+    &#drink1 {
+      bottom: 15px;
+      right: 20px;
+      width: 33px;
+      transform: rotate(-15deg);
+    }
+    &#drink2 {
+      bottom: 15px;
+      right: 60px;
+      transform: rotate(15deg);
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #main {
+    width: calc(100vw - 250px);
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #main {
+    width: 100vw;
+    .container {
+      width: calc(100vw - 160px);
+      #save-the-date {
+        margin-left: 180px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  #main {
+    .container {
+      width: calc(100vw - 80px);
+      #save-the-date {
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #main {
+    .container {
+      width: calc(100vw - 40px);
+      padding: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  h1, h2 {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  #main .bg img {
+    &#shell1 {
+      top: initial;
+      bottom: 11px;
+      right: 118px;
+      width: 10%;
+    }
+    &#shell2 {
+      top: initial;
+      bottom: 11px;
+      right: 71px;
+      width: 10%;
+    }
+  }
+}

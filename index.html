@@ -31,140 +31,108 @@
   -->
 
   <div id="main">
-    <div id="save-the-date" class="contents">
-      <img src="images/save_the_date_pin.png">
-    </div>
-    <div id="announce" class="black_board contents">
-      <div class="bg">
-        <img src="images/shell1.png" id="shell1">
-        <img src="images/shell2.png" id="shell2">
-        <img src="images/starfish.png" id="starfish">
+    <div class="container">
+      <div id="save-the-date" class="contents_img">
+        <img src="images/save_the_date_pin.png">
       </div>
-      <section>
-        <h1>結婚披露パーティーのお知らせ</h1>
-        <p>突然のご報告ではありますが、</p>
-        <p>私たち柏木隆宏と杉山明里は、この度結婚することになりました。</p>
-        <p>つきましては、ささやかではございますが、<br class="not_sp_s">
-           皆様をお招きして結婚披露パーティーを開催したいと思います。</p>
-        <p>是非ご参加いただけますようお願いいたします。</p>
-      </section>
-    </div>
-    <div id="detail" class="black_board contents">
-      <div class="bg">
-        <img src="images/sunglass.png" id="sunglass">
-        <img src="images/drink1.png" id="drink1">
-        <img src="images/drink2.png" id="drink2">
-      </div>
-      <section>
-        <h1>パーティー詳細</h1>
-        <p class="title">日時</p>
-        <p class="u red">2017.07.22(土)</p>
-        <p>受付開始 17:00 <br class="sp"> (開宴 17:30 | 終宴 19:30)</p>
-        <p class="title">場所</p>
-        <p>東京都千代田区有楽町1-5-2 <br class="sp"> 東宝ツインタワービル地下</p>
-        <p class="u red">Club DIANA</p>
-        <p>東京メトロ <br class="sp_s">日比谷駅 A5出口付近</p>
-        <p><span class="not_sp_s">東京メトロ </span>銀座駅 C1出口より徒歩3分</p>
-        <p>JR <br class="sp_s">有楽町駅 日比谷口より徒歩3分</p>
-        <p class="title">会費</p>
-        <p>7000円</p>
-      </section>
-    </div>
 
-    <p class="form_name">参加確認フォーム</p>
-    <div class="form">
-      <div class="form_contents">
-        <div class="form_wrap">
-          <form action="https://script.google.com/macros/s/AKfycbzIIEPV_mv1Bk-jA12ZHXZk49T_-3_92YuMVbGBSVwl273pSlQ/exec" onsubmit="send_form(this);return false;">
-            <input type="hidden" name="SPREADSHEET_ID" value="1Mp914nCYkcETazdRYvJistSHr7J324AOguTvHv4vm4Q">
-            <input type="hidden" name="SHEET_NAME" value="参加フォーム">
-            <div class="btn-group" data-toggle="buttons">
-              <label class="btn btn-default">
+      <div id="announce" class="contents">
+        <section>
+          <h1>結婚披露パーティーのお知らせ</h1>
+          <p>突然のご報告ではありますが、</p>
+          <p>私たち柏木隆宏と杉山明里は、この度結婚することになりました。</p>
+          <p>つきましては、ささやかではございますが、<br class="not_sp_s">
+             皆様をお招きして結婚披露パーティーを開催したいと思います。</p>
+          <p>是非ご参加いただけますようお願いいたします。</p>
+        </section>
+        <div class="bg">
+          <img src="images/shell1.png" id="shell1">
+          <img src="images/shell2.png" id="shell2">
+          <img src="images/starfish.png" id="starfish">
+        </div>
+      </div>
+
+      <div id="detail" class="contents">
+        <section>
+          <h1>パーティー詳細</h1>
+          <p class="title">日時</p>
+          <p class="u red">2017.07.22(土)</p>
+          <p>受付開始 17:00 <br class="sp"> (開宴 17:30 | 終宴 19:30)</p>
+          <p class="title">場所</p>
+          <p>東京都千代田区有楽町1-5-2 <br class="sp"> 東宝ツインタワービル地下</p>
+          <p class="u red">Club DIANA</p>
+          <p>東京メトロ <br class="sp_s">日比谷駅 A5出口付近</p>
+          <p><span class="not_sp_s">東京メトロ </span>銀座駅 C1出口より徒歩3分</p>
+          <p>JR <br class="sp_s">有楽町駅 日比谷口より徒歩3分</p>
+          <p class="title">会費</p>
+          <p>7000円</p>
+        </section>
+        <div class="bg">
+          <img src="images/sunglass.png" id="sunglass">
+          <img src="images/drink1.png" id="drink1">
+          <img src="images/drink2.png" id="drink2">
+        </div>
+      </div>
+
+      <div id="attend_form" class="contents form_contents">
+        <h2>出欠回答フォーム</h2>
+        <form action="https://script.google.com/macros/s/AKfycbzIIEPV_mv1Bk-jA12ZHXZk49T_-3_92YuMVbGBSVwl273pSlQ/exec" onsubmit="send_form(this);return false;">
+          <input type="hidden" name="SPREADSHEET_ID" value="1Mp914nCYkcETazdRYvJistSHr7J324AOguTvHv4vm4Q">
+          <input type="hidden" name="SHEET_NAME" value="参加フォーム">
+          <div class="attend" data-toggle="buttons">
+            <label class="btn btn-default">
+              <span>
                 <input name="join" value="true" type="radio" checked="checked">参加
                 <img src="images/maru_2.png" class="check_maru maru_1">
-              </label>
-              <label class="btn btn-default">
+              </span>
+            </label>
+            <label class="btn btn-default">
+              <span>
                 <input name="join" value="false" type="radio">不参加
                 <img src="images/maru_2.png" class="check_maru maru_2">
-              </label>
-              <label class="btn btn-default">
+              </span>
+            </label>
+            <label class="btn btn-default">
+              <span>
                 <input name="join" value="pending" type="radio">保留
                 <img src="images/maru_2.png" class="check_maru maru_3">
-              </label>
-            </div>
-            <label for="name">お名前 (ニックネーム): </label>
+              </span>
+            </label>
+          </div>
+          <div class="label" for="name">
+            <p>お名前 (ニックネーム): </p>
             <input type="text" name="name" value="" id="name" required />
-            <label for="email">連絡先 (LINE or EMAIL): </label>
+          </div>
+          <div class="label" for="email">
+            <p>連絡先 (LINE or EMAIL): </p>
             <input type="text" name="email" value="" id="email" required />
-            <label for="email">メッセージ (何でもお書きください): </label>
+          </div>
+          <div class="label" for="email">
+            <p>メッセージ (何でもお書きください): </p>
             <textarea  name="message" value="Your Message" id="message" required ></textarea>
-            <input type="submit" name ="submit" value="送信！" />
-          </form>
-        </div>
-        <script>
-        </script>
+          </div>
+          <input type="submit" name ="submit" value="送信！" />
+        </form>
       </div>
-    </div>
-    <div class="form form_sp">
-      <div class="orm_contents">
-        <div class="orm_wrap">
-          <form action="https://script.google.com/macros/s/AKfycbzIIEPV_mv1Bk-jA12ZHXZk49T_-3_92YuMVbGBSVwl273pSlQ/exec" onsubmit="send_form(this);return false;">
-            <input type="hidden" name="SPREADSHEET_ID" value="1Mp914nCYkcETazdRYvJistSHr7J324AOguTvHv4vm4Q">
-            <input type="hidden" name="SHEET_NAME" value="参加フォーム">
-            <div class="btn-group" data-toggle="buttons">
-              <label class="btn btn-default">
-                <input name="join" value="true" type="radio" checked="checked">参加
-                <img src="images/maru_2.png" class="check_maru maru_1">
-              </label>
-              <label class="btn btn-default">
-                <input name="join" value="false" type="radio">不参加
-                <img src="images/maru_2.png" class="check_maru maru_2">
-              </label>
-              <label class="btn btn-default">
-                <input name="join" value="pending" type="radio">保留
-                <img src="images/maru_2.png" class="check_maru maru_3">
-              </label>
-            </div>
-            <div>
-            <label for="name">お名前 (ニックネーム): </label>
-            <input type="text" name="name" value="" id="name" required />
-            </div>
-            <div>
-            <label for="email">連絡先 (LINE or EMAIL): </label>
-            <input type="text" name="email" value="" id="email" required />
-            </div>
-            <div>
-            <label for="email">メッセージ (何でもお書きください): </label>
-            <textarea  name="message" value="Your Message" id="message" required ></textarea>
-            </div>
-            <input type="submit" name ="submit" value="送信！" />
-          </form>
-        </div>
-        <script>
-        </script>
-      </div>
-    </div>
 
-    <div id="upload">
-      <img class="normal" src="images/album.png" />
-      <img class="small" src="images/album_s.png" />
-      <div class="border"></div>
-      <div class="memo">
-        <p>新郎もしくは新婦との思い出の写真を<br>以下から是非送ってください！</p>
-        <p>公開しても大丈夫な写真にしてくださいね。笑</p>
+      <div id="album_form" class="contents form_contents">
+        <h2>想い出投稿フォーム</h2>
+        <section>
+          <p>新郎もしくは新婦との思い出の写真を<br>以下から是非送ってください！</p>
+          <p>公開しても大丈夫な写真にしてくださいね。笑</p>
+        </section>
         <form id="form" action="upload.php" method="POST" enctype="multipart/form-data">
-          <div class="l">
-            <label for="name">お名前: </label>
+          <div class="label" for="name">
+            <p>お名前: </p>
             <input type="text" name="name" value="" id="name" />
           </div>
-          <div class="r">
-            <label for="name">画像: </label>
+          <div class="label" for="image">
+            <p>写真: </p>
             <input type="file" name="image" value="" id="image" accept="image/*" />
           </div>
-          <div class="c">
-            <input type="submit" name ="submit" value="送信!" />
-          </div>
+          <input type="submit" name ="submit" value="送信!" />
         </form>
+        <img class="normal" src="images/album.png" />
       </div>
     </div>
   </div>

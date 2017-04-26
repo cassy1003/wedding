@@ -11,9 +11,9 @@ body, html {
 body {
   margin: 0px;
   padding: 0px;
-  color: #000;
+  color: white;
   font-family: "katyou", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 2;
   background: #fff url(../images/bg.jpg) repeat center top/300px scroll;
   -webkit-text-size-adjust: none;
@@ -113,151 +113,20 @@ br.sp, br.sp_s {
   display: none;
 }
 
-#main {
-  float: right;
-  width: calc(100vw - 400px);
-  position: relative;
-  z-index: -3;
-}
-
-.contents {
-  margin: 100px 0px;
-}
-.contents#save-the-date {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 400px;
-  transform: rotate(-15deg);
-}
-.contents#announce {
-  position: absolute;
-  top: 400px;
-  left: -120px;
-  width: 540px;
-  transform: rotate(15deg);
-}
-.contents#detail {
-  position: absolute;
-  top: 820px;
-  left: calc((100vw - 690px) / 2 - 400px);
-  width: 690px;
-  transform: rotate(-5deg);
-}
-.contents > img {
-  box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.3);
-}
-.contents .bg img {
-  position: absolute;
-}
-.contents .bg img#shell1 {
-  right: 45px;
-  top: 75px;
-  width: 30px;
-}
-.contents .bg img#shell2 {
-  right: 10px;
-  top: 65px;
-  width: 30px;
-}
-.contents .bg img#starfish {
-  right: 100px;
-  top: 20px;
-  width: 35px;
-}
-.contents .bg img#sunglass {
-  right: 22px;
-  top: 35px;
-  width: 130px;
-}
-.contents .bg img#drink1 {
-  right: 45px;
-  bottom: 40px;
-  width: 35px;
-  transform: rotate(-18deg);
-}
-.contents .bg img#drink2 {
-  right: 88px;
-  bottom: 40px;
-  width: 50px;
-  transform: rotate(25deg);
-}
-
-.black_board {
-  color: white;
-  z-index: -2;
-  -webkit-filter: sepia(50%);
-  filter: sepia(50%);
-  background-image: url("../images/black_board.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.3);
-}
-.black_board section {
-  padding: 30px;
-}
-.black_board section h1 {
-  margin-bottom: 10px;
-}
-.black_board section .title {
-  padding-left: 0px !important;
-}
-.black_board section .title ~ p {
-  padding-left: 30px;
-}
-
-#form_open {
-  position: fixed;
-  right: 10px;
-  top: 40px;
-}
-#form_open a {
-  font-size: 14px;
-  width: 100px;
-  line-height: 100px;
-  text-align: center;
-  border-radius: 100px;
-  background: rgba(0, 0, 0, 0.8);
-  text-decoration: none;
-  display: block;
-  float: right;
-  margin-right: 8%;
-  color: white;
-  cursor: pointer;
-}
-#form_open a:hover {
-  background: black;
-}
-
-.countdown {
-  color: white;
-  text-align: right;
-  margin-bottom: 10px;
-}
-
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 960px) {
   .kazari-bg {
-    width: 300px;
+    width: 250px;
   }
 
   #sub {
-    width: 130px;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 140px;
+    padding: 100px 10px 0px;
   }
-
-  #main {
-    width: calc(100vw - 300px);
-  }
-
-  .contents#announce {
-    left: -200px;
-  }
-  .contents#detail {
-    left: calc((100vw - 690px) / 2 - 300px);
+  #sub .logo {
+    padding-bottom: 0px;
   }
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 680px) {
   .kazari {
     top: 32px;
     width: 170px;
@@ -284,503 +153,197 @@ br.sp, br.sp_s {
   }
   #sub .logo.small img {
     width: 80%;
-    border-top: 3px solid #fff;
+    border-top: none;
     border-bottom: 3px solid #fff;
   }
   #sub .countdown {
-    display: none;
-  }
-
-  #main {
-    float: none;
-    width: auto;
-  }
-
-  .contents#save-the-date {
-    left: calc(50vw - 200px);
-  }
-  .contents#announce {
-    width: 80vw;
-    left: 10vw;
-    transform: rotate(10deg);
-  }
-  .contents#announce h1 {
-    font-size: 4vw;
-  }
-  .contents#detail {
-    width: 80vw;
-    left: 10vw;
-    top: 850px;
-  }
-  .contents .bg img#starfish {
-    right: 50px;
-  }
-  .contents .bg img#sunglass {
-    width: 100px;
-  }
-  .contents .bg img#drink1 {
-    width: 30px;
-    bottom: 20px;
-  }
-  .contents .bg img#drink2 {
-    width: 40px;
-    right: 82px;
-    bottom: 20px;
-  }
-
-  .black_board section {
-    padding-right: 10px;
-  }
-  .black_board section .title ~ p {
-    padding-left: 15px;
-  }
-
-  #pagetop {
-    padding-top: 10px;
-    padding-bottom: 50px;
-  }
-  #pagetop a {
-    line-height: 24px;
-    margin-right: 10px;
-  }
-}
-@media screen and (max-width: 600px) {
-  br.sp {
-    display: block;
-  }
-}
-@media screen and (max-width: 480px) {
-  body {
-    font-family: Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif;
-  }
-
-  .contents#save-the-date, .contents#announce, .contents#detail {
-    width: 85vw;
-    position: relative;
-    margin: 30px auto;
-    transform: none;
-    left: initial;
-    top: initial;
-  }
-  .contents .bg img#starfish {
-    right: 10px;
-  }
-  .contents .bg img#sunglass {
-    width: 65px;
-  }
-}
-@media screen and (max-width: 425px) {
-  .contents .bg img#shell1 {
-    display: none;
-  }
-  .contents .bg img#shell2 {
-    display: none;
-  }
-
-  .not_sp_s {
-    display: none;
-  }
-
-  br.sp_s {
-    display: block;
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 375px) {
   .kazari {
     display: none;
   }
-
-  .contents .bg img#sunglass {
-    top: 80px;
-  }
 }
-.form_name {
-  z-index: 1;
-  position: absolute;
-  top: 1880px;
-  right: 250px;
-  width: 250px;
-  font-size: 30px;
-  font-weight: bold;
-  color: white;
-  transform: rotate(5deg);
-}
-
-.form {
-  display: block;
-  position: absolute;
-  top: 1500px;
-  right: 100px;
-  height: 450px;
-  -webkit-transition: all .5s ease-in-out .3s;
-  -moz-transition: all .5s ease-in-out .3s;
-  -o-transition: all .5s ease-in-out .3s;
-  transition: all .5s ease-in-out .3s;
-  transform: rotate(5deg);
-}
-.form .form_contents {
-  width: 530px;
-  margin: 20px auto 0;
-  height: 445px;
-}
-.form .form_contents .form_wrap {
-  overflow: hidden;
-  height: 446px;
+#main {
+  float: right;
+  width: calc(100vw - 335px);
   position: relative;
-  top: 0px;
-  z-index: 0;
-  -webkit-transition: all .5s ease-in-out .3s;
-  -moz-transition: all .5s ease-in-out .3s;
-  -o-transition: all .5s ease-in-out .3s;
-  transition: all .5s ease-in-out .3s;
 }
-.form .form_contents .form_wrap:before {
-  content: "";
-  position: absolute;
-  bottom: 126px;
-  left: 0px;
-  background: url("../images/before_pin.png");
-  width: 530px;
-  height: 316px;
+#main .container {
+  width: calc(100% - 80px);
+  margin: 50px auto;
+  padding: 40px;
 }
-.form .form_contents .form_wrap:after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0px;
-  background: url("../images/after.png");
-  width: 530px;
-  height: 260px;
-}
-.form .form_contents .form_wrap form {
-  background: #f7f2ec url("../images/letter_bg.png");
+#main .container .contents, #main .container .contents_img {
+  margin-bottom: 40px;
   position: relative;
-  top: 198px;
-  overflow: hidden;
-  height: 530px;
-  width: 400px;
-  margin: 0px auto;
-  padding: 20px;
-  border: 1px solid #fff;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 27px #fff;
-  -moz-box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 14px #fff;
-  -webkit-box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 27px #fff;
 }
-.form .form_contents .form_wrap form label {
-  margin: 11px 20px 0 0;
-  font-size: 16px;
-  color: darkgoldenrod;
-  text-transform: uppercase;
-  text-shadow: 0px 1px 0px #fff;
+#main .container .contents {
+  background: rgba(0, 0, 0, 0.6);
+  padding-bottom: 15px;
 }
-.form .form_contents .form_wrap form label.radio {
-  vertical-align: top;
-  margin-right: 0px;
-}
-.form .form_contents .form_wrap form input[type=text], .form .form_contents .form_wrap form textarea {
-  font: 14px normal normal uppercase helvetica, arial, serif;
-  color: #7c7873;
-  background: none;
-  width: 380px;
-  height: 36px;
-  padding: 0px 10px;
-  margin: 0 0 10px 0;
-  border: 1px solid #f8f5f1;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  -moz-box-shadow: inset 0px 0px 1px #726959;
-  -webkit-box-shadow: inset 0px 0px 1px #b3a895;
-  box-shadow: inset 0px 0px 1px #b3a895;
-}
-.form .form_contents .form_wrap form input[type=radio] {
-  color: #7c7873;
-  width: 60px;
-  height: 25px;
-}
-.form .form_contents .form_wrap form textarea {
-  height: 80px;
-  padding-top: 14px;
-}
-.form .form_contents .form_wrap form textarea:focus, .form .form_contents .form_wrap form input[type=text]:focus {
-  background: rgba(255, 255, 255, 0.35);
-}
-.form .form_contents .form_wrap form input[type=submit] {
-  position: relative;
-  font-family: 'YanoneKaffeesatzRegular';
-  font-size: 24px;
-  color: #7c7873;
-  text-shadow: 0 1px 0 #fff;
-  width: 100%;
+#main .container h1, #main .container h2 {
+  background: rgba(0, 0, 0, 0.7);
   text-align: center;
-  opacity: 0;
-  background: none;
-  cursor: pointer;
-  -webkit-transition: opacity .6s ease-in-out .4s;
-  -moz-transition: opacity .6s ease-in-out .4s;
-  -o-transition: opacity .6s ease-in-out .4s;
-  transition: opacity .6s ease-in-out .4s;
-  border: none;
+  margin-bottom: 10px;
 }
-.form:hover {
-  top: 1370px;
-  right: 89px;
+#main .container section p {
+  font-weight: bold;
+  padding: 0px 15px;
+  text-align: left;
 }
-.form:hover .form_wrap {
-  height: 776px;
-  top: -200px;
+#main .container section p.title {
+  padding-left: 15px !important;
 }
-.form:hover .form_wrap form input[type=submit] {
-  z-index: 1;
-  opacity: 1;
+#main .container section p.title ~ p {
+  padding-left: 30px;
 }
-.form:hover .form_wrap form input:hover[type=submit] {
-  color: #435c70;
+#main .bg img {
+  position: absolute;
+  width: 40px;
 }
-.form .btn-group {
-  display: inline-block;
+#main .bg img#shell1 {
+  top: 51px;
+  right: 51px;
+}
+#main .bg img#shell2 {
+  top: 60px;
+  right: 11px;
+}
+#main .bg img#starfish {
+  bottom: 11px;
+  right: 23px;
+}
+#main .bg img#sunglass {
+  top: 51px;
+  right: 20px;
+  width: 80px;
+}
+#main .bg img#drink1 {
+  bottom: 15px;
+  right: 20px;
+  width: 33px;
+  transform: rotate(-15deg);
+}
+#main .bg img#drink2 {
+  bottom: 15px;
+  right: 60px;
+  transform: rotate(15deg);
+}
+
+@media screen and (max-width: 960px) {
+  #main {
+    width: calc(100vw - 250px);
+  }
+}
+@media screen and (max-width: 850px) {
+  #main {
+    width: 100vw;
+  }
+  #main .container {
+    width: calc(100vw - 160px);
+  }
+  #main .container #save-the-date {
+    margin-left: 180px;
+  }
+}
+@media screen and (max-width: 680px) {
+  #main .container {
+    width: calc(100vw - 80px);
+  }
+  #main .container #save-the-date {
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 540px) {
+  #main .container {
+    width: calc(100vw - 40px);
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 470px) {
+  h1, h2 {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 410px) {
+  #main .bg img#shell1 {
+    top: initial;
+    bottom: 11px;
+    right: 118px;
+    width: 10%;
+  }
+  #main .bg img#shell2 {
+    top: initial;
+    bottom: 11px;
+    right: 71px;
+    width: 10%;
+  }
+}
+.form_contents {
+  text-align: center;
+}
+.form_contents .attend {
+  width: 100%;
+  display: table;
   vertical-align: middle;
-  width: 380px;
 }
-.form .btn-group label {
+.form_contents .attend label {
+  display: table-cell;
   text-decoration: underline;
-  cursor: pointer;
   position: relative;
 }
-.form .btn-group label input {
-  opacity: 0;
-}
-.form .btn-group label input:checked + .check_maru {
-  display: block;
-  width: 60px;
-  position: absolute;
-  top: -8px;
-}
-.form .btn-group label input:checked + .check_maru.maru_1 {
-  left: 54px;
-}
-.form .btn-group label input:checked + .check_maru.maru_2 {
-  left: 58px;
-}
-.form .btn-group label input:checked + .check_maru.maru_3 {
-  left: 53px;
-}
-.form .btn-group label .check_maru {
-  display: none;
-}
-.form_sp {
-  display: none;
-}
-
-#upload {
-  position: absolute;
-  top: 2050px;
-  left: -390px;
-  width: 800px;
-  padding-bottom: 10px;
-}
-#upload img.normal {
-  display: block;
-}
-#upload img.small {
-  display: none;
-}
-#upload .border {
-  position: absolute;
-  left: 0px;
-  bottom: 9px;
-  width: 295px;
-  height: 246px;
-  box-shadow: inset 3px -3px 3px rgba(0, 0, 0, 0.7);
-}
-#upload .memo {
-  position: absolute;
-  top: 180px;
-  left: 385px;
-  transform: rotate(-14deg);
-}
-#upload form {
-  width: 300px;
-}
-#upload form input[name=name] {
-  width: 200px;
-}
-#upload form input[name=submit] {
-  width: 200px;
-  border: 1px solid lightgray;
-  background: white;
-  box-shadow: 3px 3px 3px grey;
+.form_contents .attend label span {
+  position: relative;
   cursor: pointer;
+  padding: 10px;
 }
-
-@media screen and (max-width: 760px) {
-  #upload {
-    left: -275px;
-  }
+.form_contents .attend label input {
+  margin-right: 10px;
 }
-@media screen and (max-width: 660px) {
-  .form {
-    right: calc(50vw - 275px);
-  }
-  .form_name {
-    right: calc(50vw - 125px);
-  }
-  .form:hover {
-    right: calc(50vw - 285px);
-  }
+.form_contents .attend label input:checked ~ .check_maru {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 3px;
 }
-@media screen and (max-width: 560px) {
-  .form_name {
-    width: 240px;
-    top: 1565px;
-    right: calc(50vw - 120px);
-    color: black;
-    transform: rotate(0deg);
-  }
-
-  .form {
-    display: none;
-  }
-  .form_sp {
-    position: absolute;
-    display: block;
-    top: 1500px;
-    right: 5vw;
-    width: 90vw;
-    height: initial;
-    margin: 60px 0px;
-    text-align: center;
-    transform: initial;
-    box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.3);
-    background: #f7f2ec url("../images/letter_bg.png");
-    padding-top: 50px;
-  }
-  .form_sp form {
-    padding: 16px;
-  }
-  .form_sp form > div {
-    margin-bottom: 20px;
-  }
-  .form_sp form .btn-group {
-    width: 100%;
-  }
-  .form_sp form input[type=text] {
-    width: 90%;
-    height: 30px;
-  }
-  .form_sp form textarea {
-    width: 90%;
-    height: 100px;
-  }
-  .form_sp form input[name=submit] {
-    width: 50%;
-    min-width: 200px;
-    height: 30px;
-    border: 1px solid lightgray;
-    background: white;
-    box-shadow: 3px 3px 3px grey;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
-  .form:hover {
-    top: 1500px;
-    right: 5vw;
-  }
-  .form .btn-group label input:checked + .check_maru {
-    height: 32px;
-  }
-  .form .btn-group label input:checked + .check_maru.maru_1 {
-    left: 7px;
-  }
-  .form .btn-group label input:checked + .check_maru.maru_2 {
-    left: 12px;
-  }
-  .form .btn-group label input:checked + .check_maru.maru_3 {
-    left: 10px;
-  }
+.form_contents .attend label input:checked ~ .check_maru.maru_2 {
+  top: -6px;
 }
-@media screen and (max-width: 480px) {
-  .form_name {
-    position: relative;
-    top: 30px;
-    right: initial;
-    margin: auto;
-  }
-
-  .form_sp {
-    position: relative;
-    top: initial;
-    right: initial;
-    margin: -40px auto 30px;
-  }
-  .form_sp:hover {
-    top: initial;
-    right: initial;
-  }
-
-  #upload {
-    position: relative;
-    margin-left: 10px;
-    margin-bottom: 20px;
-    top: initial;
-    left: initial;
-    height: 375px;
-    width: 100%;
-    overflow: hidden;
-  }
-  #upload img.small {
-    display: none;
-  }
-  #upload img.normal {
-    display: none;
-  }
-  #upload img.small {
-    display: block;
-    position: absolute;
-    left: -21px;
-    top: 23px;
-    transform: rotate(14deg);
-  }
-  #upload .border {
-    display: none;
-  }
-  #upload .memo {
-    font-size: 13px;
-    transform: rotate(0deg);
-    left: 13%;
-  }
+.form_contents .attend label .check_maru {
+  display: none;
 }
-@media screen and (max-width: 440px) {
-  #upload {
-    background: #f7f2ec url("../images/letter_bg.png");
-    margin: auto;
-    width: 90vw;
-    height: initial;
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  #upload:before {
-    content: '思い出の写真';
-    position: relative;
-    top: 20px;
-    font-size: 30px;
-    font-weight: bold;
-  }
-  #upload img.small {
-    display: none;
-  }
-  #upload .memo {
-    position: static;
-    text-align: left;
-    padding: 10px;
-  }
-  #upload .memo form {
-    width: initial;
-  }
-  #upload .memo form .r {
-    text-align: left;
-  }
+.form_contents .label {
+  padding: 10px 20px 0px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.form_contents .label p {
+  text-align: left;
+}
+.form_contents .label input, .form_contents .label textarea {
+  width: calc(100% - 20px);
+  font-size: 15px;
+  padding: 5px;
+}
+.form_contents .label textarea {
+  height: 100px;
+}
+.form_contents input[type=submit] {
+  width: 50%;
+  padding: 3px;
+  font-size: 18px;
+  cursor: pointer;
+  background: white;
+  margin: 20px;
+}
+.form_contents input[type=file] {
+  background: white;
+  color: gray;
+  font-size: 12px;
+  padding: 10px 6px;
 }

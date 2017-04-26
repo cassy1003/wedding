@@ -1,0 +1,88 @@
+.kazari {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 200px;
+  z-index: -1;
+  &-bg {
+    width: 335px;
+    z-index: -2;
+  }
+}
+
+#sub {
+  position: absolute;
+  width: 180px;
+  padding: 100px 20px 0px;
+  margin-top: 30px;
+  background: rgba(0,0,0,.7);
+  border: 1px solid #fff;
+  border-left: none;
+  z-index: -2;
+  .logo {
+    padding: 15px 0px 15px;
+    img {
+      border-top: 5px solid #fff;
+      border-bottom: 5px solid #fff;
+    }
+    &.small {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .kazari-bg {
+    width: 250px;
+  }
+  #sub {
+    width: 140px;
+    padding: 100px 10px 0px;
+    .logo {
+      padding-bottom: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .kazari {
+    top: 32px;
+    width: 170px;
+    &-bg {
+      display: none;
+    }
+  }
+  #sub {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0px;
+    border: none;
+    padding: 0px;
+    text-align: center;
+    .logo {
+      display: none;
+      &.small {
+        display: block;
+        padding: 10px 0px 0px;
+        img {
+          width: 80%;
+          border-top: none;
+          border-bottom: 3px solid #fff;
+        }
+      }
+    }
+    .countdown {
+      position: absolute;
+      top: 1px;
+      right: 2px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width:375px) {
+  .kazari {
+    display: none;
+  }
+}
