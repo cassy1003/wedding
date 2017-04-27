@@ -57,6 +57,10 @@ a:hover {
   display: none;
 }
 
+.sp_s {
+  display: none;
+}
+
 .pc {
   display: block;
 }
@@ -81,6 +85,10 @@ a:hover {
     display: none;
   }
 
+  .sp_s {
+    display: none;
+  }
+
   .sp {
     display: block;
   }
@@ -100,6 +108,10 @@ a:hover {
 
   .sp {
     display: none;
+  }
+
+  .sp_s {
+    display: block;
   }
 }
 .kazari {
@@ -158,7 +170,7 @@ a:hover {
   }
 
   #sub {
-    position: static;
+    position: relative;
     float: none;
     width: auto;
     margin-top: 0px;
@@ -171,7 +183,7 @@ a:hover {
   }
   #sub .logo.small {
     display: block;
-    padding: 10px 0px 0px;
+    padding: 10px 0px;
   }
   #sub .logo.small img {
     width: 80%;
@@ -180,14 +192,15 @@ a:hover {
   }
   #sub .countdown {
     position: absolute;
-    top: 1px;
-    right: 2px;
-    font-size: 14px;
+    bottom: -3px;
+    right: 5px;
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 375px) {
   .kazari {
-    display: none;
+    z-index: 1;
+    width: 120px;
   }
 }
 #main {

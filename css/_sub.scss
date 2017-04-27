@@ -53,7 +53,7 @@
     }
   }
   #sub {
-    position: static;
+    position: relative;
     float: none;
     width: auto;
     margin-top: 0px;
@@ -64,7 +64,7 @@
       display: none;
       &.small {
         display: block;
-        padding: 10px 0px 0px;
+        padding: 10px 0px;
         img {
           width: 80%;
           border-top: none;
@@ -74,15 +74,16 @@
     }
     .countdown {
       position: absolute;
-      top: 1px;
-      right: 2px;
-      font-size: 14px;
+      bottom: -3px;
+      right: 5px;
+      font-size: 12px;
     }
   }
 }
 
 @media screen and (max-width:375px) {
   .kazari {
-    display: none;
+    z-index: 1;
+    width: 120px;
   }
 }
