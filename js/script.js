@@ -4,9 +4,9 @@ $(function(){
   var count = Math.ceil( (new Date('2017/07/22') - new Date()) / (24*60*60*1000) );
   $('.countdown').html('あと ' + count + '日');
 
-  $('form [name=name]').change(function() {
+  $('form [name=email]').change(function() {
     var name = $(this).val();
-    $('form [name=name]').each(function(i, input) {
+    $('form [name=email]').each(function(i, input) {
       if (!input.val) $(input).val(name);
     });
   });

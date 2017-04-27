@@ -76,10 +76,16 @@
 
       <div id="attend_form" class="contents form_contents">
         <h2>出欠回答フォーム</h2>
+        <section>
+          <p>少しの人数変更は直前まで大丈夫ですが</p>
+          <p>ある程度人数を把握したいので</p>
+          <p>できれば5月末までにご回答いただければと思います。</p>
+          <p>まだわからない方は「保留」でご回答ください。</p>
+        </section>
         <form onsubmit="return submit_attend_form(this);">
           <input type="hidden" name="SPREADSHEET_ID" value="1Mp914nCYkcETazdRYvJistSHr7J324AOguTvHv4vm4Q">
           <input type="hidden" name="SHEET_NAME" value="参加フォーム">
-          <div class="attend" data-toggle="buttons">
+          <div class="attend">
             <label class="btn btn-default">
               <span>
                 <input name="join" value="true" type="radio" checked="checked">参加
@@ -99,17 +105,18 @@
               </span>
             </label>
           </div>
-          <div class="label" for="name">
+          <div class="label">
             <p>お名前 (ニックネーム): </p>
-            <input type="text" name="name" value="" id="name" class="j_input" required />
+            <!-- name="name"にすると何故か「保護されていない・・・」的なのが出るのでemail -->
+            <input type="text" name="email" value="" class="j_input" required />
           </div>
-          <div class="label" for="email">
+          <div class="label">
             <p>連絡先 (LINE or EMAIL): </p>
-            <input type="text" name="email" value="" id="email" class="j_input" required />
+            <input type="text" name="address" value="" class="j_input" required />
           </div>
-          <div class="label" for="email">
+          <div class="label">
             <p>メッセージ (何でもお書きください): </p>
-            <textarea name="message" value="Your Message" id="message" class="j_input" ></textarea>
+            <textarea name="message" value="Your Message" class="j_input" ></textarea>
           </div>
           <div class="relative">
             <input type="submit" name ="submit" value="送信！" />
@@ -129,13 +136,13 @@
         <form action="upload.php" method="POST" enctype="multipart/form-data" onsubmit="return submit_album_form(this);">
           <input type="hidden" name="SPREADSHEET_ID" value="1Mp914nCYkcETazdRYvJistSHr7J324AOguTvHv4vm4Q">
           <input type="hidden" name="SHEET_NAME" value="写真リスト">
-          <div class="label" for="name">
-            <p>お名前: </p>
-            <input type="text" name="name" value="" id="name" class="j_input" required />
+          <div class="label">
+            <p>お名前 (ニックネーム): </p>
+            <input type="text" name="email" value="" class="j_input" required />
           </div>
-          <div class="label" for="image">
+          <div class="label">
             <p>写真: </p>
-            <input type="file" name="image" value="" id="image" accept="image/*" required />
+            <input type="file" name="image" value="" accept="image/*" required />
             <input type="hidden" name="file_name" value="" class="j_input">
           </div>
           <div class="relative">

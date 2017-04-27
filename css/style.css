@@ -318,6 +318,9 @@ br.sp, br.sp_s {
 .form_contents .attend label .check_maru {
   display: none;
 }
+.form_contents section {
+  margin-bottom: 15px;
+}
 .form_contents .label {
   padding: 10px 20px 0px;
   text-align: center;
