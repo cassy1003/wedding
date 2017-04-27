@@ -1,8 +1,13 @@
 #main {
-  float: right;
-  width: calc(100vw - 335px);
-  width: 740px;
+  margin: auto;
+  width: 90vw;
+  max-width: 740px;
   position: relative;
+
+  #save-the-date {
+    margin-left: 222px;
+    padding-top: 100px;
+  }
 
   .container {
     width: calc(100% - 80px);
@@ -74,38 +79,51 @@
 
 @media screen and (max-width: 960px) {
   #main {
-    width: calc(100vw - 250px);
+    #save-the-date {
+      margin-left: 213px;
+      padding-top: 60px;
+    }
+    .container {
+      margin: 25px auto;
+    }
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 800px) {
   #main {
-    width: 100vw;
     .container {
-      width: calc(100vw - 160px);
-      #save-the-date {
-        margin-left: 180px;
-      }
+      width: calc(100% - 40px);
+      padding: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #main {
+    .container {
+      width: 100%;
+      padding: 20px 0px;
     }
   }
 }
 
 @media screen and (max-width: 680px) {
   #main {
-    .container {
-      width: calc(100vw - 80px);
-      #save-the-date {
-        margin-left: 0px;
-      }
+    #save-the-date {
+      width: 100%;
+      margin: auto;
     }
   }
 }
 
 @media screen and (max-width: 540px) {
   #main {
+    #save-the-date {
+      width: 100%;
+    }
     .container {
-      width: calc(100vw - 40px);
-      padding: 20px;
+      width: 100%;
+      padding: 20px 0px;
     }
   }
 }

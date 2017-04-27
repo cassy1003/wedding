@@ -37,9 +37,15 @@ a {
   }
 }
 
-br {
-  &.sp, &.sp_s {
+.sp {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  .pc {
     display: none;
+  }
+  .sp {
+    display: block;
   }
 }
 
@@ -53,12 +59,3 @@ br {
   }
 }
 
-.l {
-  text-align: left;
-}
-.r {
-  text-align: right;
-}
-.c {
-  text-align: center;
-}

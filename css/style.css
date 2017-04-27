@@ -53,10 +53,19 @@ a:hover {
   text-decoration: none;
 }
 
-br.sp, br.sp_s {
+.sp {
   display: none;
 }
 
+@media screen and (max-width: 500px) {
+  .pc {
+    display: none;
+  }
+
+  .sp {
+    display: block;
+  }
+}
 .b {
   font-style: bold;
 }
@@ -66,18 +75,6 @@ br.sp, br.sp_s {
 }
 .u.red {
   text-decoration-color: LightCoral;
-}
-
-.l {
-  text-align: left;
-}
-
-.r {
-  text-align: right;
-}
-
-.c {
-  text-align: center;
 }
 
 .kazari {
@@ -169,10 +166,14 @@ br.sp, br.sp_s {
   }
 }
 #main {
-  float: right;
-  width: calc(100vw - 335px);
-  width: 740px;
+  margin: auto;
+  width: 90vw;
+  max-width: 740px;
   position: relative;
+}
+#main #save-the-date {
+  margin-left: 222px;
+  padding-top: 100px;
 }
 #main .container {
   width: calc(100% - 80px);
@@ -237,33 +238,39 @@ br.sp, br.sp_s {
 }
 
 @media screen and (max-width: 960px) {
-  #main {
-    width: calc(100vw - 250px);
-  }
-}
-@media screen and (max-width: 850px) {
-  #main {
-    width: 100vw;
+  #main #save-the-date {
+    margin-left: 213px;
+    padding-top: 60px;
   }
   #main .container {
-    width: calc(100vw - 160px);
+    margin: 25px auto;
   }
-  #main .container #save-the-date {
-    margin-left: 180px;
+}
+@media screen and (max-width: 800px) {
+  #main .container {
+    width: calc(100% - 40px);
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 750px) {
+  #main .container {
+    width: 100%;
+    padding: 20px 0px;
   }
 }
 @media screen and (max-width: 680px) {
-  #main .container {
-    width: calc(100vw - 80px);
-  }
-  #main .container #save-the-date {
-    margin-left: 0px;
+  #main #save-the-date {
+    width: 100%;
+    margin: auto;
   }
 }
 @media screen and (max-width: 540px) {
+  #main #save-the-date {
+    width: 100%;
+  }
   #main .container {
-    width: calc(100vw - 40px);
-    padding: 20px;
+    width: 100%;
+    padding: 20px 0px;
   }
 }
 @media screen and (max-width: 470px) {
