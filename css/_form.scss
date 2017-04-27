@@ -61,4 +61,23 @@
     font-size: 12px;
     padding: 10px 6px;
   }
+  .alert {
+    display: none;
+  }
+  .relative {
+    position: relative;
+  }
+  .loading {
+    display: table;
+    position: absolute;
+    top: 22px;
+    left: 30%;
+    width: 40%;
+    background: white;
+    font-size: 16px;
+    color: black;
+    &.hidden {
+      display: none;
+    }
+  }
 }

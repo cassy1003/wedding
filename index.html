@@ -101,17 +101,22 @@
           </div>
           <div class="label" for="name">
             <p>お名前 (ニックネーム): </p>
-            <input type="text" name="name" value="" id="name" required />
+            <input type="text" name="name" value="" id="name" class="j_input" required />
           </div>
           <div class="label" for="email">
             <p>連絡先 (LINE or EMAIL): </p>
-            <input type="text" name="email" value="" id="email" required />
+            <input type="text" name="email" value="" id="email" class="j_input" required />
           </div>
           <div class="label" for="email">
             <p>メッセージ (何でもお書きください): </p>
-            <textarea name="message" value="Your Message" id="message" ></textarea>
+            <textarea name="message" value="Your Message" id="message" class="j_input" ></textarea>
           </div>
-          <input type="submit" name ="submit" value="送信！" />
+          <div class="relative">
+            <input type="submit" name ="submit" value="送信！" />
+            <p class="loading hidden"><i class="fa fa-refresh fa-spin fa-lg"></i></p>
+          </div>
+          <p class="alert success">送信しました！</p>
+          <p class="alert fail">送信に失敗しました。時間をおいてお試しください。</p>
         </form>
       </div>
 
@@ -126,14 +131,19 @@
           <input type="hidden" name="SHEET_NAME" value="写真リスト">
           <div class="label" for="name">
             <p>お名前: </p>
-            <input type="text" name="name" value="" id="name" required />
+            <input type="text" name="name" value="" id="name" class="j_input" required />
           </div>
           <div class="label" for="image">
             <p>写真: </p>
             <input type="file" name="image" value="" id="image" accept="image/*" required />
-            <input type="hidden" name="file_name" value="">
+            <input type="hidden" name="file_name" value="" class="j_input">
           </div>
-          <input type="submit" name ="submit" value="送信!" />
+          <div class="relative">
+            <input type="submit" name ="submit" value="送信！" />
+            <p class="loading hidden"><i class="fa fa-refresh fa-spin fa-lg"></i></p>
+          </div>
+          <p class="alert success">送信しました！</p>
+          <p class="alert fail">送信に失敗しました。時間をおいてお試しください。</p>
         </form>
         <img class="normal" src="images/album.png" />
       </div>
