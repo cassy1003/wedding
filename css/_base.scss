@@ -40,13 +40,8 @@ a {
 .sp {
   display: none;
 }
-@media screen and (max-width: 500px) {
-  .pc {
-    display: none;
-  }
-  .sp {
-    display: block;
-  }
+.pc {
+  display: block;
 }
 
 .b {
@@ -59,3 +54,29 @@ a {
   }
 }
 
+@media screen and (max-width: 500px) {
+  h1, h2 {
+    font-size: 1.2em;
+  }
+  .pc {
+    display: none;
+  }
+  .sp {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  body {
+    font-size: 1.2em;
+  }
+  h1, h2 {
+    font-size: 1em;
+  }
+  .pc {
+    display: none;
+  }
+  .sp {
+    display: none;
+  }
+}

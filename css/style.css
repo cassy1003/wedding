@@ -57,15 +57,10 @@ a:hover {
   display: none;
 }
 
-@media screen and (max-width: 500px) {
-  .pc {
-    display: none;
-  }
-
-  .sp {
-    display: block;
-  }
+.pc {
+  display: block;
 }
+
 .b {
   font-style: bold;
 }
@@ -77,6 +72,36 @@ a:hover {
   text-decoration-color: LightCoral;
 }
 
+@media screen and (max-width: 500px) {
+  h1, h2 {
+    font-size: 1.2em;
+  }
+
+  .pc {
+    display: none;
+  }
+
+  .sp {
+    display: block;
+  }
+}
+@media screen and (max-width: 410px) {
+  body {
+    font-size: 1.2em;
+  }
+
+  h1, h2 {
+    font-size: 1em;
+  }
+
+  .pc {
+    display: none;
+  }
+
+  .sp {
+    display: none;
+  }
+}
 .kazari {
   position: absolute;
   left: 0px;
@@ -188,6 +213,9 @@ a:hover {
   background: rgba(0, 0, 0, 0.6);
   padding-bottom: 15px;
 }
+#main .container .contents#album_form {
+  padding-bottom: 0px;
+}
 #main .container h1, #main .container h2 {
   background: rgba(0, 0, 0, 0.7);
   text-align: center;
@@ -273,12 +301,16 @@ a:hover {
     padding: 20px 0px;
   }
 }
-@media screen and (max-width: 470px) {
-  h1, h2 {
-    font-size: 1.2em;
-  }
-}
 @media screen and (max-width: 410px) {
+  #main #save-the-date {
+    padding-top: 20px;
+  }
+  #main .container {
+    padding: 0px;
+  }
+  #main .container #announce {
+    padding-bottom: 45px;
+  }
   #main .bg img#shell1 {
     top: initial;
     bottom: 11px;
