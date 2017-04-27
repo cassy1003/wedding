@@ -2,3 +2,10 @@
 @import 'sub';
 @import 'main';
 @import 'form';
+
+footer {
+  clear: both;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1px;
+}

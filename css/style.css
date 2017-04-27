@@ -171,6 +171,7 @@ br.sp, br.sp_s {
 #main {
   float: right;
   width: calc(100vw - 335px);
+  width: 740px;
   position: relative;
 }
 #main .container {
@@ -346,4 +347,11 @@ br.sp, br.sp_s {
   color: gray;
   font-size: 12px;
   padding: 10px 6px;
+}
+
+footer {
+  clear: both;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1px;
 }

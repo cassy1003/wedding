@@ -76,7 +76,7 @@
 
       <div id="attend_form" class="contents form_contents">
         <h2>出欠回答フォーム</h2>
-        <form action="https://script.google.com/macros/s/AKfycbzIIEPV_mv1Bk-jA12ZHXZk49T_-3_92YuMVbGBSVwl273pSlQ/exec" onsubmit="send_form(this);return false;">
+        <form onsubmit="return submit_attend_form(this);">
           <input type="hidden" name="SPREADSHEET_ID" value="1Mp914nCYkcETazdRYvJistSHr7J324AOguTvHv4vm4Q">
           <input type="hidden" name="SHEET_NAME" value="参加フォーム">
           <div class="attend" data-toggle="buttons">
@@ -109,7 +109,7 @@
           </div>
           <div class="label" for="email">
             <p>メッセージ (何でもお書きください): </p>
-            <textarea  name="message" value="Your Message" id="message" required ></textarea>
+            <textarea name="message" value="Your Message" id="message" ></textarea>
           </div>
           <input type="submit" name ="submit" value="送信！" />
         </form>
@@ -121,14 +121,17 @@
           <p>新郎もしくは新婦との思い出の写真を<br>以下から是非送ってください！</p>
           <p>公開しても大丈夫な写真にしてくださいね。笑</p>
         </section>
-        <form id="form" action="upload.php" method="POST" enctype="multipart/form-data">
+        <form action="upload.php" method="POST" enctype="multipart/form-data" onsubmit="return submit_album_form(this);">
+          <input type="hidden" name="SPREADSHEET_ID" value="1Mp914nCYkcETazdRYvJistSHr7J324AOguTvHv4vm4Q">
+          <input type="hidden" name="SHEET_NAME" value="写真リスト">
           <div class="label" for="name">
             <p>お名前: </p>
-            <input type="text" name="name" value="" id="name" />
+            <input type="text" name="name" value="" id="name" required />
           </div>
           <div class="label" for="image">
             <p>写真: </p>
-            <input type="file" name="image" value="" id="image" accept="image/*" />
+            <input type="file" name="image" value="" id="image" accept="image/*" required />
+            <input type="hidden" name="file_name" value="">
           </div>
           <input type="submit" name ="submit" value="送信!" />
         </form>
@@ -137,28 +140,9 @@
     </div>
   </div>
 
-  <!-- footer>
-  </footer -->
+  <footer>Created by Takahiro KASHIWAGI.</footer>
 
-
-  <script>
-  $(function(){
-    // カウントダウン
-    var count = Math.ceil( (new Date('2017/07/22') - new Date()) / (24*60*60*1000) );
-    $('.countdown').html('あと ' + count + '日');
-
-    // 参加確認フォーム送信
-    function send_form(form) {
-      $.ajax({
-        type: 'POST',
-        url: $(form).attr('action'),
-        data: $(form).serialize(),
-        dataType: 'jsonp'
-      });
-      return false;
-    }
-  });
-  </script>
+  <script type="text/javascript" src="js/script.js"></script>
 
 </body>
 </html>
