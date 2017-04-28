@@ -28,7 +28,7 @@ $list .= '</ul>';
   <meta property="og:title" content="Takahiro & Akari Photo Alubm" />
   <meta property="og:description" content="思い出の写真 (柏木隆宏 & 杉山明里)" />
   <meta property="og:url" content="http://wedding-party.club/photos" />
-  <meta property="og:image" content="http://wedding-party.club/images/20170427_2338_IMG_1152.JPG" />
+  <meta property="og:image" content="http://wedding-party.club/images/wedding_after_party_information.jpg" />
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
