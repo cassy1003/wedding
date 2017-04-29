@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-body,html {width:100%;height:100%;}
 body {
   margin: 0px;
   padding: 0px;
@@ -19,7 +18,7 @@ h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;}
 ul {list-style-type: none;}
 img {border: none;max-width: 100%;height: auto;}
 a {
-  color: #000;
+  color: white;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   img:hover {
@@ -47,9 +46,16 @@ a {
 }
 .u {
   text-decoration: underline;
-  &.red {
+  &_red {
+    text-decoration: underline;
     text-decoration-color: LightCoral;
   }
+}
+.red {
+  color: LightCoral;
+}
+.big {
+  font-size: 1.2em;
 }
 
 @media screen and (max-width: 500px) {
