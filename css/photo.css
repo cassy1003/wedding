@@ -1,18 +1,7 @@
-@charset "UTF-8";
-@font-face {
-  font-family: 'katyou';
-  src: url("katyoufugetsu.ttf") format("truetype");
-}
-body, html {
-  width: 100%;
-  height: 100%;
-}
-
 body {
   margin: 0px;
   padding: 0px;
   color: white;
-  font-family: "katyou", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 20px;
   line-height: 2;
   background: #fff url(../images/bg.jpg) repeat center top/300px scroll;
@@ -40,7 +29,7 @@ img {
 }
 
 a {
-  color: #000;
+  color: white;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -62,7 +51,7 @@ a:hover {
 }
 
 .pc {
-  display: block;
+  display: initial;
 }
 
 .b {
@@ -72,8 +61,17 @@ a:hover {
 .u {
   text-decoration: underline;
 }
-.u.red {
+.u_red {
+  text-decoration: underline;
   text-decoration-color: LightCoral;
+}
+
+.red {
+  color: LightCoral;
+}
+
+.big {
+  font-size: 1.2em;
 }
 
 @media screen and (max-width: 500px) {
@@ -114,18 +112,38 @@ a:hover {
     display: block;
   }
 }
+.header {
+  color: black;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+.header h1 {
+  font-size: 6vw;
+}
+
+@media (min-width: 700px) {
+  .header h1 {
+    font-size: 42px;
+  }
+}
 .album {
-  width: 300px;
+  width: 90vw;
   margin: auto;
-  padding: 50px;
+  padding-top: 50px;
+  text-align: center;
 }
-.album ul {
-  list-style: none;
-}
-.album ul li {
-  margin-bottom: 20px;
-}
-.album ul li img {
-  width: 300px;
+.album .photo {
+  width: 230px;
+  height: 170px;
+  margin: 10px 20px;
+  display: -webkit-inline-box;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
   box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.back {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
 }

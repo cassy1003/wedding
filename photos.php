@@ -1,14 +1,14 @@
 <?php
-
-$list = '<ul>';
+$list = '';
 $dir = 'files/';
 $handle = opendir($dir);
 while(($file = readdir($handle)) !== false) {
-  if( filetype($path = $dir . $file) == "file" ) {
-    $list .= '<li><img src="' . $path . '"></li>';
-  }
+  if (is_file($path = $dir . $file)) $files[] = $path;
 }
-$list .= '</ul>';
+rsort($files);
+foreach ($files as $path) {
+  $list .= '<div class="photo" style="background-image: url(' . $path . ')"></div>';
+}
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +20,6 @@ $list .= '</ul>';
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="思い出の写真 (柏木隆宏 & 杉山明里)">
   <meta name="keywords" content="">
-  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" href="css/photo.css">
   <link rel="icon" href="images/favicon.ico" type="image/vnd.microsoft.icon">
@@ -29,7 +28,6 @@ $list .= '</ul>';
   <meta property="og:description" content="思い出の写真 (柏木隆宏 & 杉山明里)" />
   <meta property="og:url" content="http://wedding-party.club/photos" />
   <meta property="og:image" content="http://wedding-party.club/images/wedding_after_party_information.jpg" />
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -46,8 +44,12 @@ $list .= '</ul>';
 </head>
 
 <body>
+  <div class="header">
+    <h1>みなさんに送っていただいた写真</h1>
+  </div>
   <div class="album">
     <?php echo $list; ?>
   </div>
+  <p class="back"><a href="/">戻る</a></p>
 </body>
 </html>

@@ -85,3 +85,13 @@
     }
   }
 }
+
+@media screen and (max-width: 410px) {
+  .form_contents .attend label input:checked ~ .check_maru {
+    top: -5px;
+    left: 5px;
+    &.maru_2 {
+      top: -10px;
+    }
+  }
+}

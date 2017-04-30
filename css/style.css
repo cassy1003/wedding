@@ -51,7 +51,7 @@ a:hover {
 }
 
 .pc {
-  display: block;
+  display: initial;
 }
 
 .b {
@@ -296,7 +296,7 @@ a:hover {
   transform: rotate(15deg);
 }
 #main .notice {
-  font-size: 0.65em;
+  font-size: 0.75em;
   text-align: left;
   padding: 0px 10px;
 }
@@ -318,6 +318,9 @@ a:hover {
   #main .container {
     width: calc(100% - 40px);
     padding: 20px;
+  }
+  #main .notice {
+    font-size: 0.65em;
   }
 }
 @media screen and (max-width: 750px) {
@@ -347,21 +350,31 @@ a:hover {
   }
   #main .container {
     padding: 0px;
+    font-size: 0.8em;
   }
   #main .container #announce {
     padding-bottom: 45px;
   }
+  #main .notice {
+    font-size: 0.8em;
+  }
   #main .bg img#shell1 {
     top: initial;
-    bottom: 11px;
-    right: 118px;
+    bottom: 16px;
+    right: 50px;
     width: 10%;
   }
   #main .bg img#shell2 {
     top: initial;
     bottom: 11px;
-    right: 71px;
+    right: 11px;
     width: 10%;
+  }
+  #main .bg img#starfish {
+    bottom: initial;
+    top: 34px;
+    right: 4px;
+    width: 30px;
   }
 }
 .form_contents {
@@ -451,6 +464,15 @@ a:hover {
   display: none;
 }
 
+@media screen and (max-width: 410px) {
+  .form_contents .attend label input:checked ~ .check_maru {
+    top: -5px;
+    left: 5px;
+  }
+  .form_contents .attend label input:checked ~ .check_maru.maru_2 {
+    top: -10px;
+  }
+}
 footer {
   clear: both;
   text-align: center;

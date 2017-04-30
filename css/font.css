@@ -5,5 +5,5 @@
   src: url('katyoufugetsu.ttf') format('truetype');
 }
 body {
-  font-family: "katyou", "Hiragino Kaku Gothic Pro", "メイリオ", 'Osaka', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: 'katyou', serif, "Hiragino Kaku Gothic Pro", "メイリオ", 'Osaka', "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }

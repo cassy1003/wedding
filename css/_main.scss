@@ -99,7 +99,7 @@
     }
   }
   .notice {
-    font-size: 0.65em;
+    font-size: 0.75em;
     text-align: left;
     padding: 0px 10px;
     &:before {
@@ -126,6 +126,9 @@
     .container {
       width: calc(100% - 40px);
       padding: 20px;
+    }
+    .notice {
+      font-size: 0.65em;
     }
   }
 }
@@ -167,22 +170,32 @@
     }
     .container {
       padding: 0px;
+      font-size: 0.8em;
       #announce {
         padding-bottom: 45px;
       }
     }
+    .notice {
+      font-size: 0.8em;
+    }
     .bg img {
       &#shell1 {
         top: initial;
-        bottom: 11px;
-        right: 118px;
+        bottom: 16px;
+        right: 50px;
         width: 10%;
       }
       &#shell2 {
         top: initial;
         bottom: 11px;
-        right: 71px;
+        right: 11px;
         width: 10%;
+      }
+      &#starfish {
+        bottom: initial;
+        top: 34px;
+        right: 4px;
+        width: 30px;
       }
     }
   }
