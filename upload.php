@@ -1,13 +1,20 @@
 <?php
-
-if (is_uploaded_file($_FILES['image']['tmp_name'])) {
-  $file = 'files/' . date('Ymd_Hi_') . $_FILES['image']['name'];
-  if (move_uploaded_file($_FILES['image']['tmp_name'], $file)) {
-    chmod($file, 0644);
+try {
+  $valid = false;
+  foreach($_FILES['images']['tmp_name'] as $index => $tmp) {
+    //if (!is_null($tmp) && is_uploaded_file($tmp) {
+    $file = 'files/' . date('YmdHi_') . $_POST['email'] . '_' . $_FILES['images']['name'][$index];
+    if (move_uploaded_file($tmp, $file)) {
+      chmod($file, 0644);
+      $valid = true;
+    }
+    //}
+  }
+  if ($valid) {
     header('Location: ' . $_SERVER['HTTP_REFERER'] . '#upload_photo=success');
   } else {
     header('Location: ' . $_SERVER['HTTP_REFERER'] . '#upload_photo=fail');
   }
-} else {
-  header('Location: ' . $_SERVER['HTTP_REFERER'] . '#upload_photo=not_found');
+} catch(Exception $e) {
+  header('Location: ' . $_SERVER['HTTP_REFERER'] . '#upload_photo=fail');
 }

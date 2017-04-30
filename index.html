@@ -154,14 +154,15 @@
         <form action="upload.php" method="POST" enctype="multipart/form-data" onsubmit="return submit_album_form(this);">
           <input type="hidden" name="SPREADSHEET_ID" value="1Mp914nCYkcETazdRYvJistSHr7J324AOguTvHv4vm4Q">
           <input type="hidden" name="SHEET_NAME" value="写真リスト">
+          <input type="hidden" name="save" value="">
           <div class="label">
             <p class="require">お名前 (ニックネーム)</p>
             <input type="text" name="email" value="" class="j_input" required />
           </div>
           <div class="label">
             <p class="require">写真</p>
-            <input type="file" name="image" value="" accept="image/*" required />
-            <input type="hidden" name="file_name" value="" class="j_input">
+            <input type="file" name="images[]" value="" accept="image/*" required multiple />
+            <input type="hidden" name="file_name" value="" class="j_input" />
           </div>
           <div class="relative">
             <input type="submit" name ="submit" value="送信！" />

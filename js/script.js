@@ -23,20 +23,21 @@ $(function(){
 });
 
 function submit_attend_form(form) {
-  var valid = true;
+  var $form = $(form);
   if ($('[name=email]', $form).val() && $('[name=address]', $form).val()) {
-    send_form($(form));
+    send_form($form);
   }
   return false;
 }
 
 function submit_album_form(form) {
-  var $form = $(form);
+  var $form = $('#album_form form');
   var file = $('[type=file]', $form).prop('files')[0];
   if (file) {
     $('[name=file_name]', $form).val(file.name);
   }
   if ($('[name=email]', $form).val() && $('[name=file_name]', $form).val()) {
+    $('.loading', $form).removeClass('hidden');
     send_form($form);
     return true;
   } else {
@@ -48,7 +49,7 @@ function submit_album_form(form) {
 function send_form($form) {
   $('.alert', $form).hide();
   $('.loading', $form).removeClass('hidden');
-  $.ajax({
+  return $.ajax({
     type: 'POST',
     url: 'https://script.google.com/macros/s/AKfycbzIIEPV_mv1Bk-jA12ZHXZk49T_-3_92YuMVbGBSVwl273pSlQ/exec',
     data: $form.serialize(),
