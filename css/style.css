@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0px;
   padding: 0px;
@@ -462,6 +463,12 @@ a:hover {
 }
 .form_contents .loading.hidden {
   display: none;
+}
+.form_contents .require:after {
+  content: '*必須';
+  color: coral;
+  font-size: 14px;
+  position: absolute;
 }
 
 @media screen and (max-width: 410px) {

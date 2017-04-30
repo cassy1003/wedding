@@ -84,6 +84,12 @@
       display: none;
     }
   }
+  .require:after {
+    content: '*必須';
+    color: coral;
+    font-size: 14px;
+    position: absolute;
+  }
 }
 
 @media screen and (max-width: 410px) {

@@ -23,16 +23,25 @@ $(function(){
 });
 
 function submit_attend_form(form) {
-  send_form($(form));
+  var valid = true;
+  if ($('[name=email]', $form).val() && $('[name=address]', $form).val()) {
+    send_form($(form));
+  }
   return false;
 }
 
 function submit_album_form(form) {
   var $form = $(form);
-  var file_name = $('[type=file]', $form).prop('files')[0].name;
-  $('[name=file_name]', $form).val(file_name);
-  send_form($form);
-  return true;
+  var file = $('[type=file]', $form).prop('files')[0];
+  if (file) {
+    $('[name=file_name]', $form).val(file.name);
+  }
+  if ($('[name=email]', $form).val() && $('[name=file_name]', $form).val()) {
+    send_form($form);
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // フォーム送信
