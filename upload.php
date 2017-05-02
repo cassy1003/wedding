@@ -4,7 +4,7 @@ try {
   $valid = false;
   $images = $_FILES['images'];
   foreach($images['tmp_name'] as $index => $tmp) {
-    $file = 'files/' . date('YmdHi_') . $_POST['email'] . '_' . $_FILES['images']['name'][$index];
+    $file = 'files/' . date('YmdHi_') . $index . '_'. $_FILES['images']['name'][$index];
     //if (!is_null($tmp) && is_uploaded_file($tmp) {
     $exif = exif_read_data($tmp, 0, true);
     switch ($exif['IFD0']['Orientation']) {
@@ -20,6 +20,7 @@ try {
     }
 
     if ($created || move_uploaded_file($tmp, $file)) {
+      file_put_contents('./_photos.txt', $file . " " . $_POST['email'] . "\n", FILE_APPEND);
       chmod($file, 0644);
       $valid = true;
     }
